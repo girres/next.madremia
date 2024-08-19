@@ -8,6 +8,19 @@ import { ArrowLeftCircleIcon } from '@heroicons/react/24/solid';
 // Components
 import CartBtn from '@/components/Commerce/CartBtn';
 
+const notifyPromise = () => {
+  const myPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Got the data');
+    }, 2000);
+  });
+
+  toast.promise(myPromise, {
+    loading: 'Loading',
+    success: 'Got the data',
+    error: 'Error when fetching',
+  });
+};
 const notifySuccess = () => toast.success('Here is your Success toast.');
 const notifyError = () => toast.error('Here is your Error toast.');
 const notify = () =>
@@ -23,6 +36,9 @@ const notify = () =>
 const Comp = () => {
   return (
     <div className='grid grid-cols-2 gap-4'>
+      <button className='btn btn-warning' onClick={notifyPromise}>
+        Promise toast
+      </button>
       <button className='btn btn-success' onClick={notifySuccess}>
         Show me a success toast
       </button>
