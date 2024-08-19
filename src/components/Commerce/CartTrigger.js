@@ -27,7 +27,7 @@ const Component = () => {
         <ShoppingBagIcon className='w-8 h-8' />
         <span
           className={clsx(
-            'badge text-xs bg-green-600 absolute top-0 right-0',
+            'h-5 w-5 text-xs bg-green-600 absolute top-0 right-0 flex items-center justify-center rounded-full text-white',
             lineItems.length === 0 && 'hidden'
           )}
         >
@@ -39,7 +39,7 @@ const Component = () => {
           className={clsx('btn btn-link')}
           onClick={() => Commerce.clearCart()}
         >
-          <TrashIcon className='w-4 h-4' />
+          <TrashIcon className='w-6 h-6 fill-white' />
         </button>
       )}
     </div>

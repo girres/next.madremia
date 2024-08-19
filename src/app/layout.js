@@ -1,7 +1,3 @@
-// FONTS
-import { Inter } from 'next/font/google';
-const inter = Inter({ subsets: ['latin'] });
-
 // CSS
 import '@/styles/globals.scss';
 
@@ -19,12 +15,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body>
         <ContextProvider>
           <header>
             <CartTrigger />
           </header>
           {children}
+          <footer>
+            <p>Footer goes here</p>
+          </footer>
         </ContextProvider>
       </body>
     </html>
