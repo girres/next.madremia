@@ -16,5 +16,11 @@
     "home": "Inicio",
     "us": "Nosotros",
     "diagnosis": "Diagnóstico"
+  },
+  "blocks": {
+    "hero": {
+      "text1": "No necesitas ser experto en tecnología,",
+      "text2": "necesitas un aliado."
+    }
   }
 }

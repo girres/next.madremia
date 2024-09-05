@@ -1,10 +1,10 @@
 'use client';
-
+import Image from 'next/image';
+import Link from 'next/link';
+import { clsx } from 'clsx';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { setLocaleCookie } from '@/app/dictionaries';
-
-import Link from 'next/link';
 
 const Comp = ({ dict = {} }) => {
   const pathname = usePathname();
@@ -16,9 +16,18 @@ const Comp = ({ dict = {} }) => {
   }, [lang]);
 
   return (
-    <header className='bg-gray-800'>
-      <nav className='container mx-auto flex items-center justify-between p-4'>
-        <div className='text-white font-bold text-xl'>MadreMia</div>
+    <header className='bg-mm-black'>
+      <nav className='mm-container flex items-center justify-between p-4'>
+        <div className='logo'>
+          <Link href='/'>
+            <Image
+              src='/images/logo.png'
+              alt='MadreMía logo'
+              width={100}
+              height={100}
+            />
+          </Link>
+        </div>
         <ul className='flex space-x-4'>
           <li>
             <Link href='/' className='text-white hover:text-gray-300'>
@@ -35,14 +44,29 @@ const Comp = ({ dict = {} }) => {
               {dict.menu.diagnosis}
             </Link>
           </li>
-          <li></li>
-          <Link
-            href={lang === 'es' ? '/en' : '/es'}
-            className='text-white hover:text-gray-300'
-          >
-            {lang === 'es' ? 'ENG' : 'ESP'}
-          </Link>
         </ul>
+        <div className=''>
+          <Link
+            href={'/es'}
+            disabled={lang === 'es'}
+            className={clsx(
+              'text-white hover:text-gray-300',
+              lang === 'es' && 'font-bold text-mm-orange'
+            )}
+          >
+            ESP
+          </Link>
+          <Link
+            href={'/en'}
+            disabled={lang === 'en'}
+            className={clsx(
+              'text-white hover:text-gray-300',
+              lang === 'en' && 'font-bold text-mm-orange'
+            )}
+          >
+            ENG
+          </Link>
+        </div>
       </nav>
     </header>
   );
