@@ -11,5 +11,10 @@
   },
   "diagnosis": {
     "title": "Diagnosis"
+  },
+  "menu": {
+    "home": "Home",
+    "us": "Us",
+    "diagnosis": "Diagnosis"
   }
 }

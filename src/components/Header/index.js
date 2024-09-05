@@ -6,7 +6,7 @@ import { setLocaleCookie } from '@/app/dictionaries';
 
 import Link from 'next/link';
 
-const Comp = () => {
+const Comp = ({ dict = {} }) => {
   const pathname = usePathname();
   const lang = pathname.split('/')[1];
 
@@ -22,17 +22,17 @@ const Comp = () => {
         <ul className='flex space-x-4'>
           <li>
             <Link href='/' className='text-white hover:text-gray-300'>
-              Home
+              {dict.menu.home}
             </Link>
           </li>
           <li>
             <Link href='/us' className='text-white hover:text-gray-300'>
-              Us
+              {dict.menu.us}
             </Link>
           </li>
           <li>
             <Link href='/diagnosis' className='text-white hover:text-gray-300'>
-              Diagnosis
+              {dict.menu.diagnosis}
             </Link>
           </li>
           <li></li>

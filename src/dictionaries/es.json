@@ -11,5 +11,10 @@
   },
   "diagnosis": {
     "title": "Diagnóstico"
+  },
+  "menu": {
+    "home": "Inicio",
+    "us": "Nosotros",
+    "diagnosis": "Diagnóstico"
   }
 }
