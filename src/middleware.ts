@@ -1,6 +1,9 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
-import { NextRequest, NextResponse } from 'next/server'
+
+const LOCALE_COOKIE_NAME = 'mm_locale'
  
 let defaultLocale = 'en'
 let locales = ['en', 'es']
@@ -15,6 +18,9 @@ function getLocale(request: NextRequest) {
 }
  
 export function middleware(request: NextRequest) {
+  // Check if there is a locale cookie
+  const localeCookie = cookies().get(LOCALE_COOKIE_NAME)?.value || null
+
   // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname
   const pathnameIsMissingLocale = locales.every(
@@ -23,10 +29,7 @@ export function middleware(request: NextRequest) {
  
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
-    const locale = getLocale(request)
-    console.log("🚀 ~ middleware ~ locale:", locale)
- 
-    // e.g. incoming request is /products
+    const locale = localeCookie || getLocale(request)
     // The new URL is now /en-US/products
     return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url))
   }

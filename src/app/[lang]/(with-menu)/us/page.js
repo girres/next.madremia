@@ -1,5 +1,5 @@
 // Dictionary.
-import { getDictionary } from '@/dictionaries';
+import { getDictionary } from '@/app/dictionaries';
 
 export default async function Page({ params: { lang = 'es' } }) {
   const dict = await getDictionary(lang);

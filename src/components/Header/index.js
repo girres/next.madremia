@@ -1,9 +1,19 @@
-// import { usePathname } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { setLocaleCookie } from '@/app/dictionaries';
 
 import Link from 'next/link';
 
 const Comp = () => {
-  // const pathname = usePathname();
+  const pathname = usePathname();
+  const lang = pathname.split('/')[1];
+
+  // Set the locale cookie on first render.
+  useEffect(() => {
+    setLocaleCookie(lang ?? 'en');
+  }, [lang]);
 
   return (
     <header className='bg-gray-800'>
@@ -25,6 +35,13 @@ const Comp = () => {
               Diagnosis
             </Link>
           </li>
+          <li></li>
+          <Link
+            href={lang === 'es' ? '/en' : '/es'}
+            className='text-white hover:text-gray-300'
+          >
+            {lang === 'es' ? 'ENG' : 'ESP'}
+          </Link>
         </ul>
       </nav>
     </header>

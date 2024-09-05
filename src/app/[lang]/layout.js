@@ -2,14 +2,17 @@
 import '@/styles/globals.scss';
 
 // Dictionary.
-import { getDictionary } from '@/dictionaries';
+import { getDictionary } from '@/app/dictionaries';
+
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }];
+}
 
 export async function generateMetadata({ params: { lang = 'es' } }) {
   const dict = await getDictionary(lang);
-  console.log('🚀 ~ generateMetadata ~ dict:', dict);
   return {
-    title: 'Some',
-    description: 'Some',
+    title: dict.seo.title,
+    description: dict.seo.description,
     openGraph: {
       images: 'https://smartrent-src.s3.amazonaws.com/logos/reteki_seo.png',
     },

@@ -1,10 +1,10 @@
 import Header from '@/components/Header';
 
-export default function Layout({ children }) {
+export default function Layout(props) {
   return (
     <>
       <Header />
-      {children}
+      {props.children}
     </>
   );
 }
