@@ -16,5 +16,11 @@
     "home": "Home",
     "us": "Us",
     "diagnosis": "Diagnosis"
+  },
+  "blocks": {
+    "hero": {
+      "text1": "You don't need to be an expert in technology,",
+      "text2": "you need an ally"
+    }
   }
 }
