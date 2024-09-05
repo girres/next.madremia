@@ -28,7 +28,7 @@ const Comp = ({ dict = {} }) => {
             />
           </Link>
         </div>
-        <ul className='flex space-x-4'>
+        <ul className='uppercase flex space-x-4'>
           <li>
             <Link href='/' className='text-white hover:text-gray-300'>
               {dict.menu.home}
@@ -48,20 +48,18 @@ const Comp = ({ dict = {} }) => {
         <div className=''>
           <Link
             href={'/es'}
-            disabled={lang === 'es'}
             className={clsx(
               'text-white hover:text-gray-300',
-              lang === 'es' && 'font-bold text-mm-orange'
+              lang === 'es' && 'fontExtraB text-mm-orange'
             )}
           >
             ESP
           </Link>
           <Link
             href={'/en'}
-            disabled={lang === 'en'}
             className={clsx(
               'text-white hover:text-gray-300',
-              lang === 'en' && 'font-bold text-mm-orange'
+              lang === 'en' && 'fontExtraB text-mm-orange'
             )}
           >
             ENG

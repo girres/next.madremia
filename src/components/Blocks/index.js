@@ -4,14 +4,14 @@ export const BlockHero = ({ dict = {} }) => {
     <div className='bg-mm-black min-h-screen relative'>
       <div className='w-full h-full bg-red-900 absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center'>
         <div className='w-full mm-container'>
-          <p className='text-mm-beige text-[10vh] leading-[9vh]'>
+          <p className='text-mm-beige text-[7vw] leading-[6vw] pt-20'>
             {terms?.text1 ?? '---'}
             {` `}
             <span className='text-mm-orange'>{terms?.text2 ?? '---'}</span>
           </p>
         </div>
-        <div className='bg-pink-600 w-full'>
-          <h2 className='text-white text-3xl font-bold'>
+        <div className='bg-pink-600 w-full pt-28'>
+          <h2 className='text-white fontDGEBold text-[20vw] leading-[18vw]'>
             Slide Hero infinity loop
           </h2>
         </div>

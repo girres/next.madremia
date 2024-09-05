@@ -1,26 +1,36 @@
 @font-face {
     font-family: 'fontRegular';
-    src: url('./fonts/Poppins/Poppins-Regular.ttf');
+    src: url('./fonts/jakarta/regular.ttf');
 }
 
 @font-face {
     font-family: 'fontMedium';
-    src: url('./fonts/Poppins/Poppins-Medium.ttf');
+    src: url('./fonts/jakarta/medium.ttf');
 }
 
 @font-face {
     font-family: 'fontLight';
-    src: url('./fonts/Poppins/Poppins-Light.ttf');
+    src: url('./fonts/jakarta/light.ttf');
 }
 
 @font-face {
     font-family: 'fontBold';
-    src: url('./fonts/Poppins/Poppins-Bold.ttf');
+    src: url('./fonts/jakarta/bold.ttf');
 }
 
 @font-face {
     font-family: 'fontExtraB';
-    src: url('./fonts/Poppins/Poppins-Black.ttf');
+    src: url('./fonts/jakarta/extraBold.ttf');
+}
+
+@font-face {
+    font-family: 'fontDGBold';
+    src: url('./fonts/dharmaGothic/bold.ttf');
+}
+
+@font-face {
+    font-family: 'fontDGEBold';
+    src: url('./fonts/dharmaGothic/extraBold.ttf');
 }
 
 .fontRegular,
@@ -46,4 +56,12 @@
 .fontExtraB,
 .font-extra-bold {
     font-family: "fontExtraB";
+}
+
+.fontDGBold {
+    font-family: "fontDGBold";
+}
+
+.fontDGEBold {
+    font-family: "fontDGEBold";
 }
