@@ -1,12 +1,9 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 
 const Comp = () => {
-  const pathname = usePathname();
-  console.log('🚀 ~ Comp ~ pathname:', pathname);
+  // const pathname = usePathname();
 
   return (
     <header className='bg-gray-800'>

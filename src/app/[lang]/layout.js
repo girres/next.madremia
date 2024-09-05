@@ -1,19 +1,21 @@
 // CSS
 import '@/styles/globals.scss';
 
-// Utils.
-import dictionary from '@/dictionary.json';
+// Dictionary.
+import { getDictionary } from '@/dictionaries';
 
-export async function generateMetadata({ params: { locale = 'es' } }) {
+export async function generateMetadata({ params: { lang = 'es' } }) {
+  const dict = await getDictionary(lang);
+  console.log('🚀 ~ generateMetadata ~ dict:', dict);
   return {
-    title: dictionary[locale].seo.title,
-    description: dictionary[locale].seo.description,
+    title: 'Some',
+    description: 'Some',
     openGraph: {
       images: 'https://smartrent-src.s3.amazonaws.com/logos/reteki_seo.png',
     },
     alternates: {
       canonical:
-        (process.env?.SITE_URL || 'http://localhost:3000') + `/${locale}`,
+        (process.env?.SITE_URL || 'http://localhost:3000') + `/${lang}`,
     },
     metadataBase: new URL(process.env?.SITE_URL || 'http://localhost:3000'),
     robots: {
@@ -27,9 +29,9 @@ export async function generateMetadata({ params: { locale = 'es' } }) {
   };
 }
 
-export default function RootLayout({ children, params: { locale = 'es' } }) {
+export default function RootLayout({ children, params: { lang = 'es' } }) {
   return (
-    <html lang={locale}>
+    <html lang={lang}>
       <body>{children}</body>
     </html>
   );
