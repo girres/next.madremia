@@ -2,7 +2,11 @@
 
 const colors = require('tailwindcss/colors');
 
-const customColors = {};
+const customColors = {
+  'mm-black': '#2B0F0E',
+  'mm-beige': '#F7F6E7',
+  'mm-orange': '#F96714'
+};
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],

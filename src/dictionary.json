@@ -1,0 +1,20 @@
+{
+  "es": {
+    "seo": {
+      "title": "No necesitas ser experto en tecnología, necesitas un aliado | MadreMía",
+      "description": "MadreMia convierte tus ideas en experiencias digitales, con diseño, desarrollo y marketing web para hacer crecer tu presencia en línea de manera única"
+    },
+    "home": {
+      "title": "Página de Inicio"
+    }
+  },
+  "en": {
+    "seo": {
+      "title": "You don't need to be an expert in technology, you need an ally | MadreMía",
+      "description": "MotherMary turns your ideas into digital experiences, with web design, development, and marketing to uniquely grow your online presence"
+    },
+    "home": {
+      "title": "Home Page"
+    }
+  }
+}
