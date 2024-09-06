@@ -2,13 +2,14 @@
 import Link from 'next/link';
 
 const Comp = ({ dict = {} }) => {
+  const data = dict?.footer || {};
   return (
     <footer className='bg-mm-black text-mm-beige'>
       <div className='mm-container lg:flex items-start justify-between p-4'>
         <div className='w-full lg:w-[50%] grid grid-cols-3 gap-5 items-start justify-between'>
           <div className='text-left text-sm'>
             <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
-              Ubicaciones
+              {data?.title1 ?? 'Ubicaciones'}
             </h2>
             <ul className='text-left'>
               <li>Madrid</li>
@@ -18,7 +19,7 @@ const Comp = ({ dict = {} }) => {
           </div>
           <div className='text-left text-sm'>
             <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
-              Síguenos
+              {data?.title2 ?? 'Síguenos'}
             </h2>
             <ul>
               <li>
@@ -33,9 +34,9 @@ const Comp = ({ dict = {} }) => {
               </li>
             </ul>
           </div>
-          <div className='text-left text-sm'>
+          <div className='text-left text-sm hidden'>
             <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
-              Legal
+              {data?.title3 ?? 'Legal'}
             </h2>
             <ul>
               <li>
@@ -59,7 +60,9 @@ const Comp = ({ dict = {} }) => {
                 contacto@agenciamadremia.com
               </Link>
             </li>
-            <li>Agencia MadreMía - {new Date().getFullYear()}</li>
+            <li>
+              {data?.textFooter} - {new Date().getFullYear()}
+            </li>
           </ul>
         </div>
       </div>

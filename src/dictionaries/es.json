@@ -17,6 +17,11 @@
     "us": "Nosotros",
     "diagnosis": "Diagnóstico"
   },
+  "footer": {
+    "title1": "Ubicaciones",
+    "title2": "Síguenos",
+    "textFooter": "Agencia MadreMía"
+  },
   "blocks": {
     "hero": {
       "text1": "No necesitas ser experto en tecnología,",

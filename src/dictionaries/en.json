@@ -17,6 +17,11 @@
     "us": "Us",
     "diagnosis": "Diagnosis"
   },
+  "footer": {
+    "title1": "Locations",
+    "title2": "Social media",
+    "textFooter": "MadreMía agency"
+  },
   "blocks": {
     "hero": {
       "text1": "You don't need to be a technology expert,",
