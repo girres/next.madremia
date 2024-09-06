@@ -96,12 +96,9 @@ export const BlockProjects = ({ dict = {} }) => {
                 <p className='text-sm'>{project.description}</p>
               </div>
               <div>
-                <div className='space-x-2'>
+                <div className='badge-service-container'>
                   {project.service.map((service, index) => (
-                    <div
-                      className='badge rounded text-sm border-mm-orange bg-mm-orange text-mm-beige'
-                      key={index}
-                    >
+                    <div className='badge-service' key={index}>
                       {service}
                     </div>
                   ))}

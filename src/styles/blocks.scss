@@ -31,3 +31,11 @@
     }
 
 }
+
+.badge-service-container {
+    @apply flex items-center flex-wrap gap-2;
+
+    .badge-service {
+        @apply rounded text-sm border-mm-orange bg-mm-orange text-mm-beige p-1 px-2;
+    }
+}

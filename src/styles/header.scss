@@ -1,0 +1,13 @@
+body.is-sticky {
+    .nav-wrapper {
+        @apply fixed top-0 left-0 right-0 w-full z-50 p-1 text-xs;
+
+        img {
+            @apply w-[40px] lg:w-[80px];
+        }
+
+        .mm-container {
+            @apply items-center
+        }
+    }
+}
