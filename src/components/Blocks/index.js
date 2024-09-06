@@ -10,7 +10,7 @@ export const BlockHero = ({ dict = {} }) => {
     <div className='bg-mm-black lg:min-h-screen relative'>
       <div className='w-full h-full lg:absolute top-0 left-0 right-0 bottom-0 lg:flex lg:flex-col items-center justify-center'>
         <div className='w-full mm-container'>
-          <p className='text-mm-beige text-[7vw] leading-[6vw] pt-20 fontBold'>
+          <p className='text-mm-beige text-[7vw] leading-[7vw] pt-20 fontBold'>
             {terms?.text1 ?? '---'}
             {` `}
             <span className='text-mm-orange'>{terms?.text2 ?? '---'}</span>

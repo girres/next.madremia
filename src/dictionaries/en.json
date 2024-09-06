@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "No necesitas ser experto en tecnología, necesitas un aliado | MadreMía",
-    "description": "MadreMia convierte tus ideas en experiencias digitales, con diseño, desarrollo y marketing web para hacer crecer tu presencia en línea de manera única"
+    "title": "You don't need to be a technology expert, you need an ally | MadreMía",
+    "description": "MadreMia turns your ideas into digital experiences, with web design, development, and marketing to uniquely grow your online presence"
   },
   "home": {
     "title": "Home"
@@ -10,19 +10,19 @@
     "title": "Us"
   },
   "diagnosis": {
-    "title": "Giagnosis"
+    "title": "Diagnosis"
   },
   "menu": {
     "home": "Home",
     "us": "Us",
-    "diagnosis": "Giagnosis"
+    "diagnosis": "Diagnosis"
   },
   "blocks": {
     "hero": {
-      "text1": "No necesitas ser experto en tecnología,",
-      "text2": "necesitas un aliado.",
-      "text3": "Agencia",
-      "text4": "MadreMía"
+      "text1": "You don't need to be a technology expert,",
+      "text2": "you need an ally.",
+      "text3": "MadreMía",
+      "text4": "Agency"
     },
     "projects": {
       "title": "Así lo solucionamos",
@@ -138,10 +138,61 @@
       ]
     },
     "diagnosis": {
-      "title": "Aún no sabes qué necesitas?",
-      "text1": "Diagnóstico",
-      "text2": "Diagnóstico",
+      "text1": "Veamos",
+      "text2": "qué",
+      "text3": "necesitas",
       "textClick": "Clic aquí"
+    },
+    "us": {
+      "text1": "Estos",
+      "text2": "Somos",
+      "text3": "Nosotros"
+    },
+    "us2": {
+      "title": "Nuestra historia",
+      "text1": "La historia es muy sencilla. Somos una agencia creada por tres hermanos hace más de siete años. Hoy somos un equipo complementario de profesionales trabajando remoto desde muchos lugares.",
+      "text2": "Entendimos hace tiempo que las personas y empresas no tienen que ser expertos en tecnología para desarrollar sus proyectos. Es mucho más inteligente y rentable aliarse con el equipo indicado."
+    },
+    "us3": {
+      "items": [
+        {
+          "name": "Adrian Giraldo",
+          "email": "adrian@agenciamadremia.com",
+          "position": "Sales",
+          "image": "/images/team/adrian.png"
+        },
+        {
+          "name": "Harold Giraldo",
+          "email": "harold@agenciamadremia.com",
+          "position": "Software Engineer",
+          "image": "/images/team/adrian.png"
+        },
+        {
+          "name": "Mariana Restrepo",
+          "email": "mariana@agenciamadremia.com",
+          "position": "Marketing",
+          "image": "/images/team/adrian.png"
+        },
+        {
+          "name": "Bryan Giraldo",
+          "email": "bryan@agenciamadremia.com",
+          "position": "UX/UI Designer",
+          "image": "/images/team/bryan.png"
+        }
+      ]
+    },
+    "services": {
+      "title": "Lo que hacemos",
+      "items": [
+        "Marketing Digital",
+        "Data Análisis",
+        "Diseño UX/UI",
+        "Desarrollo Web y App",
+        "Branding",
+        "E-Commerce",
+        "Low Code / No Code Solutions",
+        "Inteligencia Artificial (IA)"
+      ]
     }
   }
 }
