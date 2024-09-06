@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
 import { ArrowTurnRightDownIcon } from '@heroicons/react/20/solid';
 
@@ -147,10 +148,41 @@ export const BlockClients = ({ dict = {} }) => {
   );
 };
 
-export const BlockDiagnosis = () => {
+export const BlockDiagnosis = ({ dict = {} }) => {
+  const { diagnosis: block = {} } = dict?.blocks || {};
+  const { title = null } = block || {};
   return (
-    <div className='bg-blue-600'>
-      <h2 className='text-white text-3xl font-bold'>BlockDiagnosis</h2>
+    <div className='bg-mm-black py-10'>
+      {title && (
+        <div className='block-title inv px-5 my-20'>
+          <h2>
+            {title}
+            <ArrowTurnRightDownIcon className='icon' />
+          </h2>
+        </div>
+      )}
+      <div className='w-full mt-28'>
+        <Marquee autoFill direction='right'>
+          <div className='flex items-center py-5 space-x-10'>
+            <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] ml-10'>
+              {block?.text1 ?? '---'}
+            </p>
+            <Link href='/diagnosis'>
+              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
+                {block?.textClick ?? 'Click'}
+              </div>
+            </Link>
+            <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+              {block?.text2 ?? '---'}
+            </p>
+            <Link href='/diagnosis'>
+              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
+                {block?.textClick ?? 'Click'}
+              </div>
+            </Link>
+          </div>
+        </Marquee>
+      </div>
     </div>
   );
 };

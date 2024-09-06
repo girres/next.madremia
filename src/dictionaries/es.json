@@ -104,6 +104,12 @@
           "image": "/images/clients/saudia.png"
         }
       ]
+    },
+    "diagnosis": {
+      "title": "Aún no sabes qué necesitas?",
+      "text1": "Diagnóstico",
+      "text2": "Diagnóstico",
+      "textClick": "Clic aquí"
     }
   }
 }

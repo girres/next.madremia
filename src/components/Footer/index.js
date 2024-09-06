@@ -1,28 +1,68 @@
+/* eslint-disable no-unused-vars */
 import Link from 'next/link';
 
 const Comp = ({ dict = {} }) => {
   return (
-    <footer className='bg-gray-300'>
-      <nav className='container mx-auto flex items-center justify-between p-4'>
-        <div className='text-white font-bold text-xl'>MadreMia</div>
-        <ul className='flex space-x-4'>
-          <li>
-            <Link href='/' className='text-white hover:text-gray-300'>
-              {dict.menu.home}
-            </Link>
-          </li>
-          <li>
-            <Link href='/us' className='text-white hover:text-gray-300'>
-              {dict.menu.us}
-            </Link>
-          </li>
-          <li>
-            <Link href='/diagnosis' className='text-white hover:text-gray-300'>
-              {dict.menu.diagnosis}
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <footer className='bg-mm-black text-mm-beige'>
+      <div className='mm-container lg:flex items-start justify-between p-4'>
+        <div className='w-full lg:w-[50%] grid grid-cols-3 gap-5 items-start justify-between'>
+          <div className='text-left text-sm'>
+            <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
+              Ubicaciones
+            </h2>
+            <ul className='text-left'>
+              <li>Madrid</li>
+              <li>Miami</li>
+              <li>Bogotá</li>
+            </ul>
+          </div>
+          <div className='text-left text-sm'>
+            <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
+              Síguenos
+            </h2>
+            <ul>
+              <li>
+                <Link href={process.env.NEXT_PUBLIC_INSTAGRAM} target='_blank'>
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link href={process.env.NEXT_PUBLIC_LINKEDIN} target='_blank'>
+                  LinkedIn
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className='text-left text-sm'>
+            <h2 className='text-mm-orange font-bold text-sm lg:text-lg mb-4'>
+              Legal
+            </h2>
+            <ul>
+              <li>
+                <Link href='/terms' target='_blank'>
+                  Términos y condiciones
+                </Link>
+              </li>
+              <li>
+                <Link href='/privacy' target='_blank'>
+                  Privacidad
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className='w-full lg:w-[50%] text-right text-sm'>
+          <div className='divider block lg:hidden' />
+          <ul>
+            <li>
+              <Link href='mailto:contacto@agenciamadremia.com' target='_blank'>
+                contacto@agenciamadremia.com
+              </Link>
+            </li>
+            <li>Agencia MadreMía - {new Date().getFullYear()}</li>
+          </ul>
+        </div>
+      </div>
     </footer>
   );
 };

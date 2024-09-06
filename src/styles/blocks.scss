@@ -15,4 +15,19 @@
         }
     }
 
+    &.inv {
+        @apply text-mm-beige;
+
+
+        h2 {
+            &:before {
+                @apply bg-mm-beige;
+            }
+
+            .icon {
+                @apply fill-mm-beige;
+            }
+        }
+    }
+
 }
