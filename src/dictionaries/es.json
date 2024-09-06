@@ -75,6 +75,35 @@
           "image": "/images/projects/Reteki.jpg"
         }
       ]
+    },
+    "clients": {
+      "title": "Nuestros Clientes",
+      "items": [
+        {
+          "title": "CarbonBox",
+          "image": "/images/clients/carbonbox.png"
+        },
+        {
+          "title": "ANM",
+          "image": "/images/clients/anm.png"
+        },
+        {
+          "title": "Herragro",
+          "image": "/images/clients/herragro.png"
+        },
+        {
+          "title": "Panasonic",
+          "image": "/images/clients/panasonic.png"
+        },
+        {
+          "title": "Raw",
+          "image": "/images/clients/raw.png"
+        },
+        {
+          "title": "Saudia",
+          "image": "/images/clients/saudia.png"
+        }
+      ]
     }
   }
 }

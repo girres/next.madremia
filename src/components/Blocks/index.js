@@ -15,7 +15,7 @@ export const BlockHero = ({ dict = {} }) => {
           </p>
         </div>
         <div className='w-full mt-28'>
-          <Marquee gradient={false}>
+          <Marquee autoFill>
             <div className='flex items-center uppercase py-5 space-x-10'>
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] ml-10'>
                 {terms?.text3 ?? '---'}
@@ -59,18 +59,20 @@ export const BlockSlideHero = () => {
 
 export const BlockProjects = ({ dict = {} }) => {
   const { projects = {} } = dict?.blocks || {};
-  const { items = [] } = projects || {};
+  const { title = null, items = [] } = projects || {};
 
   if (!items || items.length < 1) return null;
 
   return (
     <div className='bg-mm-beige py-10'>
-      <div className='block-title px-5 my-20'>
-        <h2>
-          {projects?.title ?? '-'}
-          <ArrowTurnRightDownIcon className='icon' />
-        </h2>
-      </div>
+      {title && (
+        <div className='block-title px-5 my-20'>
+          <h2>
+            {title}
+            <ArrowTurnRightDownIcon className='icon' />
+          </h2>
+        </div>
+      )}
       <div className='space-y-5 mm-container'>
         {items.map((project, index) => (
           <div key={index} className='flex w-full flex-col md:flex-row'>
@@ -112,10 +114,35 @@ export const BlockProjects = ({ dict = {} }) => {
   );
 };
 
-export const BlockClients = () => {
+export const BlockClients = ({ dict = {} }) => {
+  const { clients = {} } = dict?.blocks || {};
+  const { title = null, items = [] } = clients || {};
+
+  if (!items || items.length < 1) return null;
+
   return (
-    <div className='bg-green-600'>
-      <h2 className='text-white text-3xl font-bold'>BlockClients</h2>
+    <div className='bg-mm-beige py-10'>
+      <div className='block-title px-5 my-20'>
+        <h2>
+          {title ?? '-'}
+          <ArrowTurnRightDownIcon className='icon' />
+        </h2>
+      </div>
+      <Marquee speed='20' autoFill gradient gradientColor='#F7F6E7'>
+        <div className='flex justify-between items-center w-full'>
+          {items.map((item, index) => (
+            <Image
+              src={item.image}
+              alt={item.title}
+              text={item.title}
+              width={150}
+              height={150}
+              key={index}
+              className='mx-10'
+            />
+          ))}
+        </div>
+      </Marquee>
     </div>
   );
 };
