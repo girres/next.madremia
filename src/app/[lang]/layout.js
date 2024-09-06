@@ -14,7 +14,7 @@ export async function generateMetadata({ params: { lang = 'es' } }) {
     title: dict.seo.title,
     description: dict.seo.description,
     openGraph: {
-      images: 'https://smartrent-src.s3.amazonaws.com/logos/reteki_seo.png',
+      images: '/images/seo-mm.jpg',
     },
     alternates: {
       canonical:

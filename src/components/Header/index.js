@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { clsx } from 'clsx';
@@ -16,15 +17,18 @@ const Comp = ({ dict = {} }) => {
   }, [lang]);
 
   return (
-    <header className='bg-mm-black'>
-      <nav className='mm-container flex items-center justify-between p-4'>
+    <header className='bg-mm-black py-0 px-0 lg:p-5'>
+      <nav className='mm-container flex items-center lg:items-start justify-between py-2'>
         <div className='logo'>
           <Link href='/'>
             <Image
               src='/images/logo.png'
               alt='MadreMía logo'
-              width={100}
+              width={150}
               height={100}
+              quality={100}
+              priority
+              className='max-h-[80px] max-w-[80px] lg:max-h-[100px] lg:max-w-[150px]'
             />
           </Link>
         </div>
@@ -45,12 +49,13 @@ const Comp = ({ dict = {} }) => {
             </Link>
           </li>
         </ul>
-        <div className=''>
+        <div className='language-switch space-x-3'>
           <Link
             href={'/es'}
             className={clsx(
-              'text-white hover:text-gray-300',
-              lang === 'es' && 'fontExtraB text-mm-orange'
+              lang === 'es'
+                ? 'fontExtraB text-mm-orange'
+                : 'text-white hover:text-gray-300'
             )}
           >
             ESP
@@ -58,8 +63,9 @@ const Comp = ({ dict = {} }) => {
           <Link
             href={'/en'}
             className={clsx(
-              'text-white hover:text-gray-300',
-              lang === 'en' && 'fontExtraB text-mm-orange'
+              lang === 'en'
+                ? 'fontExtraB text-mm-orange'
+                : 'text-white hover:text-gray-300'
             )}
           >
             ENG

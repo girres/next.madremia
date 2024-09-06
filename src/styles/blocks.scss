@@ -1,1 +1,18 @@
-// CSS Code goes here
+.block-title {
+    @apply flex;
+
+    h2 {
+        @apply text-2xl font-regular relative;
+
+        &:before {
+            content: '';
+            @apply absolute -bottom-[9px] left-0 h-[3px] w-full bg-mm-black;
+        }
+
+        .icon {
+            @apply absolute -right-7 -bottom-10 fill-mm-black;
+            @apply w-10 h-10;
+        }
+    }
+
+}
