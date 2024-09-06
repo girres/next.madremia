@@ -25,59 +25,59 @@
       "text4": "Agency"
     },
     "projects": {
-      "title": "Así lo solucionamos",
+      "title": "How we solve it",
       "items": [
         {
-          "title": "Año 2020",
-          "heading": "Convertir Seguidores en Clientes: Mejorando Estrategias",
-          "description": "Nuestro cliente había creado su marca y sus redes sociales, pero necesitaba convertir a su audiencia en verdaderos compradores. Sentía que tenía muchos seguidores, pero algo no estaba bien en la estrategia para volverlos clientes.",
-          "service": ["Marketing Digital"],
+          "title": "Year 2020",
+          "heading": "Converting Followers into Customers: Improving Strategies",
+          "description": "Our client had created their brand and social media presence, but they needed to convert their audience into actual buyers. They felt that they had a lot of followers, but something was not right in the strategy to turn them into customers.",
+          "service": ["Digital Marketing"],
           "image": "/images/projects/ESD.jpg"
         },
         {
-          "title": "Año 2022",
-          "heading": "Transformando Ideas de Cambio Climático en Realidad Tecnológica",
-          "description": "Una Start-up Colombiana tenía una gran idea sobre Cambio Climático y medición de huella de carbono. Contaban con un equipo de expertos, sabían que podían capitalizar toda esa información, pero necesitaban un aliado tecnológico para materializar su idea.",
-          "service": ["Desarrollo web y app ", "Diseño UX / UI"],
+          "title": "Year 2022",
+          "heading": "Turning Climate Change Ideas into Technological Reality",
+          "description": "A Colombian Start-up had a great idea about Climate Change and carbon footprint measurement. They had a team of experts and knew they could capitalize on all that information, but they needed a technological ally to materialize their idea.",
+          "service": ["Web and App Development ", "UX/UI Design"],
           "image": "/images/projects/CarbonBox.jpg"
         },
         {
-          "title": "Año 2023",
-          "heading": "Modernización Urgente: Transformando Logística y Ventas",
-          "description": "Nuestro cliente tenía un enorme reto con su operación logística y con su fuerza de ventas. Sus canales eran demasiado tradicionales y sentía que se estaba quedando atrás frente a su competencia. Era urgente un salto tecnológico. Estaba obligado a modernizarse. ",
-          "service": ["E-commerce", "Desarrollo web y app"],
+          "title": "Year 2023",
+          "heading": "Urgent Modernization: Transforming Logistics and Sales",
+          "description": "Our client had a major challenge with their logistics operation and sales force. Their channels were too traditional and they felt they were falling behind their competition. A technological leap was urgently needed. They were compelled to modernize.",
+          "service": ["E-commerce", "Web and App Development"],
           "image": "/images/projects/ZonaHerragro.jpg"
         },
         {
-          "title": "Año 2023",
-          "heading": "De la idea a la acción en 3 semanas",
-          "description": "En New Jersey (EE.UU), una emprendedora estaba lista para dar el siguiente paso con su proyecto. Tenía terminado su modelo de negocio y las tareas administrativas estaban completas. Para salir a vender, lo único que faltaba era darle vida a su marca y crear su propia página web.",
+          "title": "Year 2023",
+          "heading": "From Idea to Action in 3 Weeks",
+          "description": "In New Jersey (USA), an entrepreneur was ready to take the next step with her project. She had completed her business model and administrative tasks. To start selling, the only thing missing was to bring her brand to life and create her own website.",
           "service": [
-            "Desarrollo web y app",
+            "Web and App Development",
             "Branding",
-            "Diseño UX / UI",
-            "IA"
+            "UX/UI Design",
+            "AI"
           ],
           "image": "/images/projects/GoClean.jpg"
         },
         {
-          "title": "Año 2023",
-          "heading": "Optimización Tecnológica con AWS Rentable",
-          "description": "Un proyecto enfocado en renting de dispositivos electrónicos llevaba ya varios años en operación, pero su tecnología no era óptima. Después de mucho trabajo de planeación y ejecución, logramos centralizar su infraestructura en Amazon Web Services de forma funcional y muy rentable.",
-          "service": ["Servicios en la Nube", "Desarrollo web y app"],
+          "title": "Year 2023",
+          "heading": "Cost-Effective Technological Optimization with AWS",
+          "description": "A project focused on electronic device rental had been in operation for several years, but its technology was not optimal. After much planning and execution, we were able to centralize its infrastructure on Amazon Web Services in a functional and very cost-effective manner.",
+          "service": ["Cloud services", "Web and App Development"],
           "image": "/images/projects/Reteki.jpg"
         },
         {
-          "title": "Año 2024",
-          "heading": "IA Personalizada sin Inversión Millonaria",
-          "description": "El gerente general de una importante empresa industrial de Colombia, estaba convencido que necesitaba de la Inteligencia Artificial, pero no podía hacer una inversión inicial millonaria. Nos contactó y creamos su propio Chat GPT, alimentado principalmente por sus propias bases de datos.",
-          "service": ["IA", "Low Code / No Code Solutions"],
+          "title": "Year 2024",
+          "heading": "Customized AI without Million Dollar Investment",
+          "description": "The general manager of a major industrial company in Colombia was convinced that he needed Artificial Intelligence, but he couldn't make a million-dollar initial investment. He contacted us and we created his own Chat GPT, mainly fueled by his own databases.",
+          "service": ["AI", "Low Code / No Code Solutions"],
           "image": "/images/projects/Reteki.jpg"
         }
       ]
     },
     "clients": {
-      "title": "Nuestros Clientes",
+      "title": "Our Clients",
       "items": [
         {
           "title": "anm",
@@ -138,20 +138,20 @@
       ]
     },
     "diagnosis": {
-      "text1": "Veamos",
-      "text2": "qué",
-      "text3": "necesitas",
-      "textClick": "Clic aquí"
+      "text1": "What",
+      "text2": "do you",
+      "text3": "need",
+      "textClick": "Clic here"
     },
     "us": {
-      "text1": "Estos",
-      "text2": "Somos",
-      "text3": "Nosotros"
+      "text1": "Here's",
+      "text2": "a bit",
+      "text3": "about us"
     },
     "us2": {
-      "title": "Nuestra historia",
-      "text1": "La historia es muy sencilla. Somos una agencia creada por tres hermanos hace más de siete años. Hoy somos un equipo complementario de profesionales trabajando remoto desde muchos lugares.",
-      "text2": "Entendimos hace tiempo que las personas y empresas no tienen que ser expertos en tecnología para desarrollar sus proyectos. Es mucho más inteligente y rentable aliarse con el equipo indicado."
+      "title": "Our Story",
+      "text1": "The story is very simple. We are an agency created by three siblings over seven years ago. Today, we are a complementary team of professionals working remotely from various locations.",
+      "text2": "We understood long ago that individuals and businesses don't have to be technology experts to develop their projects. It is much smarter and cost-effective to ally with the right team."
     },
     "us3": {
       "items": [
@@ -182,16 +182,16 @@
       ]
     },
     "services": {
-      "title": "Lo que hacemos",
+      "title": "What we do",
       "items": [
-        "Marketing Digital",
-        "Data Análisis",
-        "Diseño UX/UI",
-        "Desarrollo Web y App",
+        "Digital Marketing",
+        "Data Analysis",
+        "UX/UI Design",
+        "Web and App Development",
         "Branding",
         "E-Commerce",
         "Low Code / No Code Solutions",
-        "Inteligencia Artificial (IA)"
+        "Artificial Intelligence (AI)"
       ]
     }
   }
