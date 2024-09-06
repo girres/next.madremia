@@ -6,7 +6,7 @@ import {
   BlockHero,
   BlockProjects,
   BlockClients,
-  BlockDiagnosis,
+  // BlockDiagnosis,
 } from '@/components/Blocks';
 
 export default async function Page({ params: { lang = 'es' } }) {
@@ -17,7 +17,7 @@ export default async function Page({ params: { lang = 'es' } }) {
       <BlockHero dict={dict} />
       <BlockProjects dict={dict} />
       <BlockClients dict={dict} />
-      <BlockDiagnosis dict={dict} />
+      {/* <BlockDiagnosis dict={dict} /> */}
     </main>
   );
 }

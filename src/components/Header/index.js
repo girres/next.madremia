@@ -12,7 +12,7 @@ const Comp = ({ dict = {} }) => {
   const navRef = useRef(null);
 
   const pathname = usePathname();
-  const lang = pathname.split('/')[1];
+  const [, lang = 'es', pageName = null] = pathname.split('/');
 
   // Set the locale cookie on first render.
   useEffect(() => {
@@ -48,7 +48,7 @@ const Comp = ({ dict = {} }) => {
   }, []);
 
   return (
-    <header ref={navRef} className=''>
+    <header ref={navRef} className={clsx(pageName && 'light')}>
       <div className='nav-wrapper bg-mm-black py-0 px-0 lg:p-5'>
         <nav className='mm-container flex items-center lg:items-start justify-between py-2'>
           <div className='logo'>
@@ -89,7 +89,7 @@ const Comp = ({ dict = {} }) => {
               href={'/es'}
               className={clsx(
                 lang === 'es'
-                  ? 'fontExtraB text-mm-orange'
+                  ? 'fontExtraB active'
                   : 'text-white hover:text-gray-300'
               )}
             >
@@ -99,7 +99,7 @@ const Comp = ({ dict = {} }) => {
               href={'/en'}
               className={clsx(
                 lang === 'en'
-                  ? 'fontExtraB text-mm-orange'
+                  ? 'fontExtraB active'
                   : 'text-white hover:text-gray-300'
               )}
             >

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
 import { ArrowTurnRightDownIcon } from '@heroicons/react/20/solid';
+import { clsx } from 'clsx';
 
 export const BlockHero = ({ dict = {} }) => {
   const { hero: terms = {} } = dict?.blocks || {};
@@ -126,7 +127,13 @@ export const BlockClients = ({ dict = {} }) => {
           <ArrowTurnRightDownIcon className='icon' />
         </h2>
       </div>
-      <Marquee speed='20' autoFill gradient gradientColor='#F7F6E7'>
+      <Marquee
+        speed='20'
+        autoFill
+        direction='right'
+        gradient
+        gradientColor='#F7F6E7'
+      >
         <div className='flex justify-between items-center w-full'>
           {items.map((item, index) => (
             <Image
@@ -147,7 +154,12 @@ export const BlockClients = ({ dict = {} }) => {
 
 export const BlockDiagnosis = ({ dict = {} }) => {
   const { diagnosis: block = {} } = dict?.blocks || {};
-  const { title = null } = block || {};
+  const {
+    title = null,
+    text1 = null,
+    text2 = null,
+    text3 = null,
+  } = block || {};
   return (
     <div className='bg-mm-black py-10'>
       {title && (
@@ -159,19 +171,28 @@ export const BlockDiagnosis = ({ dict = {} }) => {
         </div>
       )}
       <div className='w-full mt-28'>
-        <Marquee autoFill direction='right'>
+        <Marquee autoFill direction='left'>
           <div className='flex items-center py-5 space-x-10'>
-            <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] ml-10'>
-              {block?.text1 ?? '---'}
-            </p>
+            {text1 && (
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] ml-10'>
+                {text1}
+              </p>
+            )}
+            {text2 && (
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] pl-10'>
+                {text2}
+              </p>
+            )}
             <Link href='/diagnosis'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
                 {block?.textClick ?? 'Click'}
               </div>
             </Link>
-            <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw]'>
-              {block?.text2 ?? '---'}
-            </p>
+            {text3 && (
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+                {text3}
+              </p>
+            )}
             <Link href='/diagnosis'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
                 {block?.textClick ?? 'Click'}
@@ -179,6 +200,137 @@ export const BlockDiagnosis = ({ dict = {} }) => {
             </Link>
           </div>
         </Marquee>
+      </div>
+    </div>
+  );
+};
+
+export const BlockUsHeading = ({ data = {} }) => {
+  const { text1 = null, text2 = null, text3 = null } = data || {};
+  return (
+    <div className='block'>
+      <div className='flex items-center flex-wrap space-x-20 text-left'>
+        {text1 && (
+          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+            {text1}
+          </div>
+        )}
+        <Image
+          src='/images/gif/mm_team.gif'
+          alt='MadreMía logo'
+          width={300}
+          height={300}
+          quality={100}
+          priority
+          className='max-h-[100px] max-w-[100px] lg:max-h-[300px] lg:max-w-[300px]'
+        />
+        {text2 && (
+          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+            {text2}
+          </div>
+        )}
+        {text3 && (
+          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+            {text3}
+          </div>
+        )}
+        <Image
+          src='/images/gif/us.gif'
+          alt='MadreMía logo'
+          width={800}
+          height={800}
+          quality={100}
+          priority
+          className='max-h-[200px] max-w-[200px] lg:max-h-[600px] lg:max-w-[600px]'
+        />
+      </div>
+    </div>
+  );
+};
+
+export const BlockText = ({ data = {}, env = false }) => {
+  const { title = null, text1 = null, text2 = null } = data || {};
+
+  return (
+    <div className={clsx('py-10 lg:py-20', env && 'env')}>
+      {title && (
+        <div className='block-title mb-10'>
+          <h2>
+            {title}
+            <ArrowTurnRightDownIcon className='icon' />
+          </h2>
+        </div>
+      )}
+      <div className='text-sm max-w-[700px]'>
+        {text1 && <p className='py-3'>{text1}</p>}
+        {text2 && <p className='py-3'>{text2}</p>}
+      </div>
+    </div>
+  );
+};
+
+export const BlockProfiles = ({ data = {} }) => {
+  const { items = [] } = data || {};
+
+  if (!items || items.length < 1) return null;
+
+  return (
+    <div className='bg-mm-beige py-10 flex justify-center lg:justify-end'>
+      <div className='max-w-[1200px]'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10'>
+          {items.map((item, index) => (
+            <div key={index} className='overflow-hidden'>
+              <div>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  text={item.title}
+                  width={520}
+                  height={750}
+                  quality={100}
+                  priority
+                  className='w-full max-h-[375px] lg:max-w-[260px] lg:max-h-[375px]'
+                />
+              </div>
+              {/* Name */}
+              <p className='fontMedium text-lg'>{item.name}</p>
+              {/* Email */}
+              <p className='text-gray-500 font-light underline text-sm'>
+                <Link href={`mailto:${item.email}`} targrt='_blank'>
+                  {item.email}
+                </Link>
+              </p>
+              {/* Position */}
+              <p className='text-lg fontBold text-mm-orange'>{item.position}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const BlockServices = ({ data = {} }) => {
+  const { title = null, items = [] } = data || {};
+
+  if (!items || items.length < 1) return null;
+
+  return (
+    <div className={clsx('py-10 lg:py-20')}>
+      {title && (
+        <div className='block-title mb-10'>
+          <h2>
+            {title}
+            <ArrowTurnRightDownIcon className='icon' />
+          </h2>
+        </div>
+      )}
+      <div className='badge-service-container max-w-[700px] py-10'>
+        {items.map((service, index) => (
+          <div className='badge-service' key={index}>
+            {service}
+          </div>
+        ))}
       </div>
     </div>
   );

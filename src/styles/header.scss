@@ -1,6 +1,6 @@
 body.is-sticky {
     .nav-wrapper {
-        @apply fixed top-0 left-0 right-0 w-full z-50 p-1 text-xs;
+        @apply fixed top-0 left-0 right-0 w-full z-50 p-1 text-xs shadow;
 
         img {
             @apply w-[40px] lg:w-[80px];
@@ -8,6 +8,30 @@ body.is-sticky {
 
         .mm-container {
             @apply items-center
+        }
+    }
+}
+
+.language-switch a {
+    &.active {
+        @apply text-mm-orange;
+    }
+}
+
+header.light {
+    .nav-wrapper {
+        @apply bg-mm-beige;
+
+        ul a {
+            @apply text-mm-black;
+        }
+
+        .language-switch a {
+            @apply text-mm-black;
+
+            &.active {
+                @apply text-mm-orange;
+            }
         }
     }
 }
