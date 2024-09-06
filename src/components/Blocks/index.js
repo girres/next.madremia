@@ -22,19 +22,19 @@ export const BlockHero = ({ dict = {} }) => {
                 {terms?.text3 ?? '---'}
               </p>
               <Image
-                src='/images/gif/friends.gif'
+                src='/images/gif/mm_team.gif'
                 alt='MadreMía logo'
-                width={200}
+                width={250}
                 height={200}
                 quality={100}
                 priority
-                className='max-h-[100px] max-w-[100px] lg:max-h-[200px] lg:max-w-[200px]'
+                className='max-h-[100px] max-w-[100px] lg:max-h-[200px] lg:max-w-[250px]'
               />
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw]'>
                 {terms?.text4 ?? '---'}
               </p>
               <Image
-                src='/images/gif/office.webp'
+                src='/images/gif/friends.gif'
                 alt='MadreMía logo'
                 width={200}
                 height={200}
