@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "You don't need to be an expert in technology, you need an ally | MadreMía",
-    "description": "MotherMary turns your ideas into digital experiences, with web design, development, and marketing to uniquely grow your online presence"
+    "title": "No necesitas ser experto en tecnología, necesitas un aliado | MadreMía",
+    "description": "MadreMia convierte tus ideas en experiencias digitales, con diseño, desarrollo y marketing web para hacer crecer tu presencia en línea de manera única"
   },
   "home": {
     "title": "Home"
@@ -10,19 +10,138 @@
     "title": "Us"
   },
   "diagnosis": {
-    "title": "Diagnosis"
+    "title": "Giagnosis"
   },
   "menu": {
     "home": "Home",
     "us": "Us",
-    "diagnosis": "Diagnosis"
+    "diagnosis": "Giagnosis"
   },
   "blocks": {
     "hero": {
-      "text1": "You don't need to be an expert in technology,",
-      "text2": "you need an ally",
-      "text3": "Agency",
+      "text1": "No necesitas ser experto en tecnología,",
+      "text2": "necesitas un aliado.",
+      "text3": "Agencia",
       "text4": "MadreMía"
+    },
+    "projects": {
+      "title": "Así lo solucionamos",
+      "items": [
+        {
+          "title": "Año 2020",
+          "heading": "Convertir Seguidores en Clientes: Mejorando Estrategias",
+          "description": "Nuestro cliente había creado su marca y sus redes sociales, pero necesitaba convertir a su audiencia en verdaderos compradores. Sentía que tenía muchos seguidores, pero algo no estaba bien en la estrategia para volverlos clientes.",
+          "service": ["Marketing Digital"],
+          "image": "/images/projects/ESD.jpg"
+        },
+        {
+          "title": "Año 2022",
+          "heading": "Transformando Ideas de Cambio Climático en Realidad Tecnológica",
+          "description": "Una Start-up Colombiana tenía una gran idea sobre Cambio Climático y medición de huella de carbono. Contaban con un equipo de expertos, sabían que podían capitalizar toda esa información, pero necesitaban un aliado tecnológico para materializar su idea.",
+          "service": ["Desarrollo web y app ", "Diseño UX / UI"],
+          "image": "/images/projects/CarbonBox.jpg"
+        },
+        {
+          "title": "Año 2023",
+          "heading": "Modernización Urgente: Transformando Logística y Ventas",
+          "description": "Nuestro cliente tenía un enorme reto con su operación logística y con su fuerza de ventas. Sus canales eran demasiado tradicionales y sentía que se estaba quedando atrás frente a su competencia. Era urgente un salto tecnológico. Estaba obligado a modernizarse. ",
+          "service": ["E-commerce", "Desarrollo web y app"],
+          "image": "/images/projects/ZonaHerragro.jpg"
+        },
+        {
+          "title": "Año 2023",
+          "heading": "De la idea a la acción en 3 semanas",
+          "description": "En New Jersey (EE.UU), una emprendedora estaba lista para dar el siguiente paso con su proyecto. Tenía terminado su modelo de negocio y las tareas administrativas estaban completas. Para salir a vender, lo único que faltaba era darle vida a su marca y crear su propia página web.",
+          "service": [
+            "Desarrollo web y app",
+            "Branding",
+            "Diseño UX / UI",
+            "IA"
+          ],
+          "image": "/images/projects/GoClean.jpg"
+        },
+        {
+          "title": "Año 2023",
+          "heading": "Optimización Tecnológica con AWS Rentable",
+          "description": "Un proyecto enfocado en renting de dispositivos electrónicos llevaba ya varios años en operación, pero su tecnología no era óptima. Después de mucho trabajo de planeación y ejecución, logramos centralizar su infraestructura en Amazon Web Services de forma funcional y muy rentable.",
+          "service": ["Servicios en la Nube", "Desarrollo web y app"],
+          "image": "/images/projects/Reteki.jpg"
+        },
+        {
+          "title": "Año 2024",
+          "heading": "IA Personalizada sin Inversión Millonaria",
+          "description": "El gerente general de una importante empresa industrial de Colombia, estaba convencido que necesitaba de la Inteligencia Artificial, pero no podía hacer una inversión inicial millonaria. Nos contactó y creamos su propio Chat GPT, alimentado principalmente por sus propias bases de datos.",
+          "service": ["IA", "Low Code / No Code Solutions"],
+          "image": "/images/projects/Reteki.jpg"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Nuestros Clientes",
+      "items": [
+        {
+          "title": "anm",
+          "image": "/images/clients/anm.png"
+        },
+        {
+          "title": "esd",
+          "image": "/images/clients/esd.png"
+        },
+        {
+          "title": "fixer",
+          "image": "/images/clients/fixer.png"
+        },
+        {
+          "title": "herragro",
+          "image": "/images/clients/herragro.png"
+        },
+        {
+          "title": "raw",
+          "image": "/images/clients/raw.png"
+        },
+        {
+          "title": "rtvc",
+          "image": "/images/clients/rtvc.png"
+        },
+        {
+          "title": "vecol",
+          "image": "/images/clients/vecol.png"
+        },
+        {
+          "title": "carbonbox",
+          "image": "/images/clients/carbonbox.png"
+        },
+        {
+          "title": "espaciocontinuo",
+          "image": "/images/clients/espaciocontinuo.png"
+        },
+        {
+          "title": "goclean",
+          "image": "/images/clients/goclean.png"
+        },
+        {
+          "title": "panasonic",
+          "image": "/images/clients/panasonic.png"
+        },
+        {
+          "title": "reteki",
+          "image": "/images/clients/reteki.png"
+        },
+        {
+          "title": "saudia",
+          "image": "/images/clients/saudia.png"
+        },
+        {
+          "title": "viva",
+          "image": "/images/clients/viva.png"
+        }
+      ]
+    },
+    "diagnosis": {
+      "title": "Aún no sabes qué necesitas?",
+      "text1": "Diagnóstico",
+      "text2": "Diagnóstico",
+      "textClick": "Clic aquí"
     }
   }
 }
