@@ -18,8 +18,8 @@ export const BlockHero = ({ dict = {} }) => {
         </div>
         <div className='w-full pt-28'>
           <Marquee>
-            <div className='flex items-center uppercase py-5 space-x-10'>
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] ml-10 tracking-wider'>
+            <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
+              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>
                 {terms?.text3 ?? '---'}
               </p>
               <Image
@@ -30,20 +30,19 @@ export const BlockHero = ({ dict = {} }) => {
                 height={200}
                 quality={100}
                 priority
-                className='max-h-[100px] max-w-[100px] lg:max-h-[200px] lg:max-w-[250px]'
+                className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
               />
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] tracking-wide'>
+              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] tracking-wide'>
                 {terms?.text4 ?? '---'}
               </p>
               <Image
-                src='/images/gif/friends.gif'
+                src='/images/static/1.jpg'
                 alt='MadreMía logo'
-                unoptimized
                 width={200}
                 height={200}
                 quality={100}
                 priority
-                className='max-h-[100px] max-w-[100px] lg:max-h-[200px] lg:max-w-[200px]'
+                className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
               />
             </div>
           </Marquee>
