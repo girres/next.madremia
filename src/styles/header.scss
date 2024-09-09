@@ -1,6 +1,30 @@
+.nav-wrapper {
+    @apply transition-all ease-in-out;
+    @apply bg-mm-black;
+
+    img {
+        @apply transition-all ease-in-out;
+    }
+
+    .main-menu {
+        a {
+            @apply text-white hover:text-mm-orange;
+        }
+    }
+
+}
+
+.language-switch a {
+    @apply text-white;
+
+    &.active {
+        @apply text-mm-orange font-bold;
+    }
+}
+
 body.is-sticky {
     .nav-wrapper {
-        @apply fixed top-0 left-0 right-0 w-full z-50 p-1 text-xs shadow;
+        @apply fixed top-0 left-0 right-0 w-full z-50 p-1 text-xs shadow bg-mm-beige;
 
         img {
             @apply w-[40px] lg:w-[80px];
@@ -9,12 +33,18 @@ body.is-sticky {
         .mm-container {
             @apply items-center
         }
-    }
-}
 
-.language-switch a {
-    &.active {
-        @apply text-mm-orange;
+        ul a {
+            @apply text-mm-black;
+        }
+
+        .language-switch a {
+            @apply text-mm-black;
+
+            &.active {
+                @apply text-mm-orange;
+            }
+        }
     }
 }
 
