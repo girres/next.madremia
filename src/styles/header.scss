@@ -16,6 +16,21 @@
         }
     }
 
+    .mobile-menu {
+        a {
+            @apply text-mm-black hover:text-mm-orange;
+
+            &.active {
+                @apply text-mm-orange font-bold bg-transparent;
+            }
+        }
+
+        .icon {
+            svg {
+                @apply h-6 w-6 fill-mm-beige;
+            }
+        }
+    }
 }
 
 .language-switch a {
@@ -49,6 +64,14 @@ body.is-sticky {
                 @apply text-mm-orange;
             }
         }
+
+        .mobile-menu {
+            .icon {
+                svg {
+                    @apply fill-mm-black;
+                }
+            }
+        }
     }
 }
 
@@ -65,6 +88,14 @@ header.light {
 
             &.active {
                 @apply text-mm-orange;
+            }
+        }
+
+        .mobile-menu {
+            .icon {
+                svg {
+                    @apply fill-mm-black;
+                }
             }
         }
     }

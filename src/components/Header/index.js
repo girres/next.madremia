@@ -6,6 +6,7 @@ import { clsx } from 'clsx';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { setLocaleCookie } from '@/app/dictionaries';
+import { Bars3Icon } from '@heroicons/react/20/solid';
 
 const Comp = ({ dict = {} }) => {
   // Ref for sticky header
@@ -64,7 +65,7 @@ const Comp = ({ dict = {} }) => {
               />
             </Link>
           </div>
-          <ul className='main-menu uppercase flex space-x-4'>
+          <ul className='main-menu hidden uppercase lg:flex space-x-4'>
             <li>
               <Link
                 href='/'
@@ -92,13 +93,59 @@ const Comp = ({ dict = {} }) => {
               </Link>
             </li>
           </ul>
-          <div className='language-switch space-x-3'>
+          <div className='language-switch space-x-3 flex items-center'>
             <Link href={'/es'} className={clsx(lang === 'es' && 'active')}>
               ESP
             </Link>
             <Link href={'/en'} className={clsx(lang === 'en' && 'active')}>
               ENG
             </Link>
+            <div className='mobile-menu block lg:hidden'>
+              <div className='dropdown dropdown-end'>
+                <div
+                  tabIndex={0}
+                  role='button'
+                  className='btn btn-ghost btn-circle avatar'
+                >
+                  <div className='icon'>
+                    <Bars3Icon />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className='menu menu-sm dropdown-content bg-mm-beige rounded-box z-[1] mt-3 w-52 p-2 shadow'
+                >
+                  <li>
+                    <Link
+                      href='/'
+                      className={clsx(
+                        (pathname === '/es' || pathname === '/en') && 'active'
+                      )}
+                    >
+                      {dict.menu.home}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={clsx(pathname.includes('/us') && 'active')}
+                      href='/us'
+                    >
+                      {dict.menu.us}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={clsx(
+                        pathname.includes('/diagnosis') && 'active'
+                      )}
+                      href='/diagnosis'
+                    >
+                      {dict.menu.diagnosis}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </nav>
       </div>

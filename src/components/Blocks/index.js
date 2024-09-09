@@ -24,7 +24,7 @@ const Icon = () => (
 export const BlockHero = ({ dict = {} }) => {
   const { hero: terms = {} } = dict?.blocks || {};
   return (
-    <div className='bg-mm-black h-screen relative'>
+    <div className='bg-mm-black lg:h-screen relative'>
       <div className='w-full h-full lg:absolute top-0 left-0 right-0 bottom-0 lg:flex lg:flex-col items-center justify-center'>
         <div className='w-full h-full lg:flex justify-end flex-col'>
           <p className='text-mm-beige text-[7vw] leading-[7vw] fontBold mm-container py-[5%] lg:pb-[5%]'>
