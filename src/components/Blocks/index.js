@@ -164,12 +164,7 @@ export const BlockClients = ({ dict = {} }) => {
 
 export const BlockDiagnosis = ({ dict = {} }) => {
   const { diagnosis: block = {} } = dict?.blocks || {};
-  const {
-    title = null,
-    text1 = null,
-    text2 = null,
-    text3 = null,
-  } = block || {};
+  const { title = null, text1 = null, text2 = null } = block || {};
   return (
     <div className='bg-mm-black py-10'>
       {title && (
@@ -188,19 +183,14 @@ export const BlockDiagnosis = ({ dict = {} }) => {
                 {text1}
               </p>
             )}
-            {text2 && (
-              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[19vw] pl-10 tracking-wider'>
-                {text2}
-              </p>
-            )}
             <Link href='/diagnosis'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {block?.textClick ?? 'Click'}
               </div>
             </Link>
-            {text3 && (
+            {text2 && (
               <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[19vw] tracking-wider'>
-                {text3}
+                {text2}
               </p>
             )}
             <Link href='/diagnosis'>

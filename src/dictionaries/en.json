@@ -143,9 +143,8 @@
       ]
     },
     "diagnosis": {
-      "text1": "What",
-      "text2": "do you",
-      "text3": "need",
+      "text1": "What do you",
+      "text2": "need",
       "textClick": "Clic here"
     },
     "us": {
