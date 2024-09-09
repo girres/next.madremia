@@ -24,15 +24,14 @@ const Comp = ({ dict = {} }) => {
     const isSticky = () => {
       if (navRef?.current) {
         const { offsetHeight = 0 } = navRef?.current || {};
-        // Set min-height to header dom element
         navRef.current.style.minHeight = `${offsetHeight}px`;
-
         // Validate the scroll position
-        const currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > offsetHeight + 200) {
+        const currentScrollPos = window.scrollY;
+        if (currentScrollPos > offsetHeight + 50) {
           document.body.classList.add('is-sticky');
         } else {
           document.body.classList.remove('is-sticky');
+          navRef.current.style.minHeight = `auto`;
         }
       }
     };
