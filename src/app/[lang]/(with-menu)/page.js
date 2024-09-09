@@ -2,12 +2,7 @@
 import { getDictionary } from '@/app/dictionaries';
 
 // Blocks components.
-import {
-  BlockHero,
-  BlockProjects,
-  BlockClients,
-  // BlockDiagnosis,
-} from '@/components/Blocks';
+import { BlockHero, BlockProjects, BlockClients } from '@/components/Blocks';
 
 export default async function Page({ params: { lang = 'es' } }) {
   const dict = await getDictionary(lang);
@@ -17,7 +12,6 @@ export default async function Page({ params: { lang = 'es' } }) {
       <BlockHero dict={dict} />
       <BlockProjects dict={dict} />
       <BlockClients dict={dict} />
-      {/* <BlockDiagnosis dict={dict} /> */}
     </main>
   );
 }

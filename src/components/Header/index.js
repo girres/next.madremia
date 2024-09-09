@@ -64,45 +64,22 @@ const Comp = ({ dict = {} }) => {
               />
             </Link>
           </div>
-          <ul className='uppercase flex space-x-4'>
+          <ul className='main-menu uppercase flex space-x-4'>
             <li>
-              <Link href='/' className='text-white hover:text-gray-300'>
-                {dict.menu.home}
-              </Link>
+              <Link href='/'>{dict.menu.home}</Link>
             </li>
             <li>
-              <Link href='/us' className='text-white hover:text-gray-300'>
-                {dict.menu.us}
-              </Link>
+              <Link href='/us'>{dict.menu.us}</Link>
             </li>
             <li>
-              <Link
-                href='/diagnosis'
-                className='text-white hover:text-gray-300'
-              >
-                {dict.menu.diagnosis}
-              </Link>
+              <Link href='/diagnosis'>{dict.menu.diagnosis}</Link>
             </li>
           </ul>
           <div className='language-switch space-x-3'>
-            <Link
-              href={'/es'}
-              className={clsx(
-                lang === 'es'
-                  ? 'fontExtraB active'
-                  : 'text-white hover:text-gray-300'
-              )}
-            >
+            <Link href={'/es'} className={clsx(lang === 'es' && 'active')}>
               ESP
             </Link>
-            <Link
-              href={'/en'}
-              className={clsx(
-                lang === 'en'
-                  ? 'fontExtraB active'
-                  : 'text-white hover:text-gray-300'
-              )}
-            >
+            <Link href={'/en'} className={clsx(lang === 'en' && 'active')}>
               ENG
             </Link>
           </div>

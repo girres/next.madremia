@@ -16,10 +16,10 @@ export const BlockHero = ({ dict = {} }) => {
             <span className='text-mm-orange'>{terms?.text2 ?? '---'}</span>
           </p>
         </div>
-        <div className='w-full mt-28'>
-          <Marquee autoFill>
+        <div className='w-full pt-28'>
+          <Marquee>
             <div className='flex items-center uppercase py-5 space-x-10'>
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] ml-10'>
+              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] ml-10 tracking-wider'>
                 {terms?.text3 ?? '---'}
               </p>
               <Image
@@ -32,7 +32,7 @@ export const BlockHero = ({ dict = {} }) => {
                 priority
                 className='max-h-[100px] max-w-[100px] lg:max-h-[200px] lg:max-w-[250px]'
               />
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw]'>
+              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[20vw] tracking-wide'>
                 {terms?.text4 ?? '---'}
               </p>
               <Image
@@ -90,13 +90,13 @@ export const BlockProjects = ({ dict = {} }) => {
                 priority
               />
             </div>
-            <div className='py-5 md:py-0 md:px-5 w-full'>
-              <p className='text-gray-400 font-bold mb-3'>{project.title}</p>
+            <div className='py-5 md:py-0 md:px-5 w-full text-sm'>
+              <p className='text-mm-black/50 font-bold mb-2'>{project.title}</p>
               <div className='mb-10'>
                 <p className='fontBold mb-3 text-lg'>
                   {project?.heading ?? '--'}
                 </p>
-                <p className='text-sm'>{project.description}</p>
+                <p className=''>{project.description}</p>
               </div>
               <div>
                 <div className='badge-service-container'>
@@ -122,8 +122,8 @@ export const BlockClients = ({ dict = {} }) => {
   if (!items || items.length < 1) return null;
 
   return (
-    <div className='bg-mm-beige py-10'>
-      <div className='block-title px-5 my-20'>
+    <div className='mt-20 mb-28'>
+      <div className='block-title px-5 mb-20'>
         <h2>
           {title ?? '-'}
           <ArrowTurnRightDownIcon className='icon' />
@@ -176,27 +176,27 @@ export const BlockDiagnosis = ({ dict = {} }) => {
         <Marquee autoFill direction='left'>
           <div className='flex items-center py-5 space-x-10'>
             {text1 && (
-              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] ml-10'>
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[19vw] ml-10 tracking-wider'>
                 {text1}
               </p>
             )}
             {text2 && (
-              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw] pl-10'>
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[19vw] pl-10 tracking-wider'>
                 {text2}
               </p>
             )}
             <Link href='/diagnosis'>
-              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
+              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {block?.textClick ?? 'Click'}
               </div>
             </Link>
             {text3 && (
-              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+              <p className='text-mm-beige uppercase fontDGEBold text-[20vw] leading-[19vw] tracking-wider'>
                 {text3}
               </p>
             )}
             <Link href='/diagnosis'>
-              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] hover:scale-125 transition-all'>
+              <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {block?.textClick ?? 'Click'}
               </div>
             </Link>
