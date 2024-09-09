@@ -7,16 +7,14 @@ import { clsx } from 'clsx';
 export const BlockHero = ({ dict = {} }) => {
   const { hero: terms = {} } = dict?.blocks || {};
   return (
-    <div className='bg-mm-black lg:min-h-screen relative'>
+    <div className='bg-mm-black h-screen relative'>
       <div className='w-full h-full lg:absolute top-0 left-0 right-0 bottom-0 lg:flex lg:flex-col items-center justify-center'>
-        <div className='w-full mm-container'>
-          <p className='text-mm-beige text-[7vw] leading-[7vw] pt-[15%] fontBold'>
+        <div className='w-full h-full lg:flex justify-end flex-col'>
+          <p className='text-mm-beige text-[7vw] leading-[7vw] fontBold mm-container py-[5%] lg:pb-[5%]'>
             {terms?.text1 ?? '---'}
             {` `}
             <span className='text-mm-orange'>{terms?.text2 ?? '---'}</span>
           </p>
-        </div>
-        <div className='w-full pt-28'>
           <Marquee>
             <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>

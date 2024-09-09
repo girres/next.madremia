@@ -6,7 +6,7 @@ import { getDictionary } from '@/app/dictionaries';
 
 // GTag
 import { GoogleAnalytics } from '@next/third-parties/google';
-const GA_TAG = process.env.GA_TAG || null;
+const GA_TAG = process.env.NEXT_PUBLIC_GA_TAG || null;
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }];
