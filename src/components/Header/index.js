@@ -48,6 +48,34 @@ const Comp = ({ dict = {} }) => {
     };
   }, []);
 
+  const MenuLinks = () => (
+    <>
+      <li>
+        <Link
+          href='/'
+          className={clsx(
+            (pathname === '/es' || pathname === '/en') && 'active'
+          )}
+        >
+          {dict.menu.home}
+        </Link>
+      </li>
+      <li>
+        <Link className={clsx(pathname.includes('/us') && 'active')} href='/us'>
+          {dict.menu.us}
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={clsx(pathname.includes('/diagnosis') && 'active')}
+          href='/diagnosis'
+        >
+          {dict.menu.diagnosis}
+        </Link>
+      </li>
+    </>
+  );
+
   return (
     <header ref={navRef} className={clsx(pageName && 'light')}>
       <div className='nav-wrapper bg-mm-black py-0 px-0 lg:p-5'>
@@ -66,32 +94,7 @@ const Comp = ({ dict = {} }) => {
             </Link>
           </div>
           <ul className='main-menu hidden uppercase lg:flex space-x-4'>
-            <li>
-              <Link
-                href='/'
-                className={clsx(
-                  (pathname === '/es' || pathname === '/en') && 'active'
-                )}
-              >
-                {dict.menu.home}
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={clsx(pathname.includes('/us') && 'active')}
-                href='/us'
-              >
-                {dict.menu.us}
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={clsx(pathname.includes('/diagnosis') && 'active')}
-                href='/diagnosis'
-              >
-                {dict.menu.diagnosis}
-              </Link>
-            </li>
+            <MenuLinks />
           </ul>
           <div className='language-switch space-x-3 flex items-center'>
             <Link href={'/es'} className={clsx(lang === 'es' && 'active')}>
@@ -115,34 +118,7 @@ const Comp = ({ dict = {} }) => {
                   tabIndex={0}
                   className='menu menu-sm dropdown-content bg-mm-beige rounded-box z-[1] mt-3 w-52 p-2 shadow'
                 >
-                  <li>
-                    <Link
-                      href='/'
-                      className={clsx(
-                        (pathname === '/es' || pathname === '/en') && 'active'
-                      )}
-                    >
-                      {dict.menu.home}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className={clsx(pathname.includes('/us') && 'active')}
-                      href='/us'
-                    >
-                      {dict.menu.us}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className={clsx(
-                        pathname.includes('/diagnosis') && 'active'
-                      )}
-                      href='/diagnosis'
-                    >
-                      {dict.menu.diagnosis}
-                    </Link>
-                  </li>
+                  <MenuLinks />
                 </ul>
               </div>
             </div>
