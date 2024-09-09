@@ -143,13 +143,7 @@ export const BlockClients = ({ dict = {} }) => {
           <Icon className='icon' />
         </h2>
       </div>
-      <Marquee
-        speed='20'
-        autoFill
-        direction='right'
-        gradient
-        gradientColor='#F7F6E7'
-      >
+      <Marquee speed='20' autoFill direction='right'>
         <div className='flex justify-between items-center w-full'>
           {items.map((item, index) => (
             <Image
@@ -159,7 +153,7 @@ export const BlockClients = ({ dict = {} }) => {
               width={150}
               height={150}
               key={index}
-              className='mx-10'
+              className='mx-10 max-w-[100px] lg:max-w-[150px]'
             />
           ))}
         </div>
