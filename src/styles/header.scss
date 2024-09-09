@@ -9,6 +9,10 @@
     .main-menu {
         a {
             @apply text-white hover:text-mm-orange;
+
+            &.active {
+                @apply text-mm-orange font-bold;
+            }
         }
     }
 

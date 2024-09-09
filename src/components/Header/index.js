@@ -66,13 +66,30 @@ const Comp = ({ dict = {} }) => {
           </div>
           <ul className='main-menu uppercase flex space-x-4'>
             <li>
-              <Link href='/'>{dict.menu.home}</Link>
+              <Link
+                href='/'
+                className={clsx(
+                  (pathname === '/es' || pathname === '/en') && 'active'
+                )}
+              >
+                {dict.menu.home}
+              </Link>
             </li>
             <li>
-              <Link href='/us'>{dict.menu.us}</Link>
+              <Link
+                className={clsx(pathname.includes('/us') && 'active')}
+                href='/us'
+              >
+                {dict.menu.us}
+              </Link>
             </li>
             <li>
-              <Link href='/diagnosis'>{dict.menu.diagnosis}</Link>
+              <Link
+                className={clsx(pathname.includes('/diagnosis') && 'active')}
+                href='/diagnosis'
+              >
+                {dict.menu.diagnosis}
+              </Link>
             </li>
           </ul>
           <div className='language-switch space-x-3'>

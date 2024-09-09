@@ -4,6 +4,10 @@ import '@/styles/globals.scss';
 // Dictionary.
 import { getDictionary } from '@/app/dictionaries';
 
+// GTag
+import { GoogleAnalytics } from '@next/third-parties/google';
+const GA_TAG = process.env.GA_TAG || null;
+
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }];
 }
@@ -36,6 +40,7 @@ export default function RootLayout({ children, params: { lang = 'es' } }) {
   return (
     <html lang={lang}>
       <body>{children}</body>
+      {GA_TAG && <GoogleAnalytics gaId={GA_TAG} />}
     </html>
   );
 }
