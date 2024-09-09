@@ -28,7 +28,7 @@ const Comp = ({ dict = {} }) => {
 
         // Validate the scroll position
         const currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > offsetHeight + 20) {
+        if (currentScrollPos > offsetHeight + 200) {
           document.body.classList.add('is-sticky');
         } else {
           document.body.classList.remove('is-sticky');
