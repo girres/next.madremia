@@ -40,6 +40,43 @@
     }
 }
 
-.block-text.light {
-    // @apply text-mm-black
+
+.mm-type-form {
+    @apply max-w-[700px] mx-auto text-sm;
+
+    .label {
+        @apply text-2xl font-bold;
+    }
+
+    .desc {
+        @apply text-lg font-light;
+    }
+
+    .wrapper-field {
+        @apply mt-5
+    }
+
+    .error-message {
+        @apply text-red-500 text-xs mt-1;
+    }
+
+    .actions {
+        @apply my-5;
+    }
+
+    input {
+        @apply input input-lg w-full rounded-none bg-transparent text-mm-beige text-xl font-light;
+        @apply border-b-[1px] border-mm-beige focus:border-mm-orange;
+        @apply border-l-0 border-r-0 border-t-0 px-0;
+    }
+}
+
+.btn-mm-beige {
+    @apply btn bg-mm-beige text-mm-black rounded-lg px-4 py-2 text-lg font-light border-none;
+    @apply hover:bg-mm-beige hover:text-mm-black;
+}
+
+.btn-mm-orange {
+    @apply bg-mm-orange text-mm-beige rounded-lg px-4 py-2 text-lg font-light border-none;
+    @apply hover:bg-mm-beige hover:text-mm-orange;
 }
