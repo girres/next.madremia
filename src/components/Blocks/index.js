@@ -25,6 +25,7 @@ export const BlockHero = ({ dict = {} }) => {
               <Image
                 src='/images/gif/mm_team.gif'
                 alt='MadreMía logo'
+                unoptimized
                 width={250}
                 height={200}
                 quality={100}
@@ -37,6 +38,7 @@ export const BlockHero = ({ dict = {} }) => {
               <Image
                 src='/images/gif/friends.gif'
                 alt='MadreMía logo'
+                unoptimized
                 width={200}
                 height={200}
                 quality={100}
@@ -218,6 +220,7 @@ export const BlockUsHeading = ({ data = {} }) => {
         <Image
           src='/images/gif/mm_team.gif'
           alt='MadreMía logo'
+          unoptimized
           width={300}
           height={300}
           quality={100}
@@ -237,6 +240,7 @@ export const BlockUsHeading = ({ data = {} }) => {
         <Image
           src='/images/gif/us.gif'
           alt='MadreMía logo'
+          unoptimized
           width={800}
           height={800}
           quality={100}

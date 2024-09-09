@@ -164,25 +164,25 @@
           "name": "Adrian Giraldo",
           "email": "adrian@agenciamadremia.com",
           "position": "Sales",
-          "image": "/images/team/adrian.png"
+          "image": "/images/team/adrian.jpg"
         },
         {
           "name": "Harold Giraldo",
           "email": "harold@agenciamadremia.com",
           "position": "Software Engineer",
-          "image": "/images/team/adrian.png"
+          "image": "/images/team/harold.jpg"
         },
         {
           "name": "Mariana Restrepo",
           "email": "mariana@agenciamadremia.com",
           "position": "Marketing",
-          "image": "/images/team/adrian.png"
+          "image": "/images/team/adrian.jpg"
         },
         {
           "name": "Bryan Giraldo",
           "email": "bryan@agenciamadremia.com",
           "position": "UX/UI Designer",
-          "image": "/images/team/bryan.png"
+          "image": "/images/team/bryan.jpg"
         }
       ]
     },
