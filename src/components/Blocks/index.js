@@ -1,8 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
-import { ArrowTurnRightDownIcon } from '@heroicons/react/20/solid';
+// import { ArrowTurnRightDownIcon } from '@heroicons/react/20/solid';
 import { clsx } from 'clsx';
+
+const Icon = () => (
+  <span className='icon'>
+    <svg
+      width='778'
+      height='387'
+      viewBox='0 0 778 387'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M302.001 40.0391L151.251 40.0368L0.5 40.0345V0L302.001 0.00457764C465.843 0.00453787 557.458 27.5945 604.673 93.8636C627.898 126.461 638.715 166.293 644.001 211.344C647.778 243.526 648.835 279.503 649.131 318.775L743.462 225.444C751.363 217.627 764.173 217.627 772.074 225.444C779.975 233.261 779.975 245.935 772.074 253.753L643.32 381.142C635.419 388.959 622.609 388.959 614.708 381.142L485.954 253.753C478.053 245.935 478.053 233.261 485.954 225.444C493.855 217.627 506.664 217.627 514.565 225.444L608.66 318.541C608.363 280.046 607.34 246.059 603.808 215.961C598.875 173.929 589.252 141.704 571.601 116.93C537.063 68.4548 465.172 40.039 302.001 40.0391Z'
+      />
+    </svg>
+  </span>
+);
 
 export const BlockHero = ({ dict = {} }) => {
   const { hero: terms = {} } = dict?.blocks || {};
@@ -70,7 +87,7 @@ export const BlockProjects = ({ dict = {} }) => {
         <div className='block-title px-5 my-20'>
           <h2>
             {title}
-            <ArrowTurnRightDownIcon className='icon' />
+            <Icon className='icon' />
           </h2>
         </div>
       )}
@@ -123,7 +140,7 @@ export const BlockClients = ({ dict = {} }) => {
       <div className='block-title px-5 mb-20'>
         <h2>
           {title ?? '-'}
-          <ArrowTurnRightDownIcon className='icon' />
+          <Icon className='icon' />
         </h2>
       </div>
       <Marquee
@@ -165,7 +182,7 @@ export const BlockDiagnosis = ({ dict = {} }) => {
         <div className='block-title inv px-5 my-20'>
           <h2>
             {title}
-            <ArrowTurnRightDownIcon className='icon' />
+            <Icon className='icon' />
           </h2>
         </div>
       )}
@@ -258,7 +275,7 @@ export const BlockText = ({ data = {}, env = false }) => {
         <div className='block-title mb-10'>
           <h2>
             {title}
-            <ArrowTurnRightDownIcon className='icon' />
+            <Icon className='icon' />
           </h2>
         </div>
       )}
@@ -322,7 +339,7 @@ export const BlockServices = ({ data = {} }) => {
         <div className='block-title mb-10'>
           <h2>
             {title}
-            <ArrowTurnRightDownIcon className='icon' />
+            <Icon className='icon' />
           </h2>
         </div>
       )}

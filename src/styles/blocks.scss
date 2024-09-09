@@ -6,12 +6,15 @@
 
         &:before {
             content: '';
-            @apply absolute -bottom-[9px] left-0 h-[3px] w-full bg-mm-black;
+            @apply absolute -bottom-[8.5px] left-0 h-[3.1px] w-[90%] bg-mm-black;
         }
 
         .icon {
-            @apply absolute -right-7 -bottom-10 fill-mm-black;
-            @apply w-10 h-10;
+            @apply absolute -right-7 -bottom-[53px];
+
+            svg {
+                @apply w-16 h-16 fill-mm-black;
+            }
         }
     }
 
