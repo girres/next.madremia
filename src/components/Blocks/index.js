@@ -225,7 +225,7 @@ export const BlockUsHeading = ({ data = {} }) => {
   const { text1 = null, text2 = null, text3 = null } = data || {};
   return (
     <div className='block'>
-      <div className='flex items-center flex-wrap space-x-20 text-left'>
+      <div className='hidden lg:flex items-center flex-wrap space-x-20 text-left'>
         {text1 && (
           <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
             {text1}
@@ -261,6 +261,23 @@ export const BlockUsHeading = ({ data = {} }) => {
           priority
           className='max-h-[200px] max-w-[200px] lg:max-h-[600px] lg:max-w-[600px]'
         />
+      </div>
+      <div className='block lg:hidden'>
+        <div className='uppercase fontDGEBold text-[20vw] leading-[20vw] tracking-wider flex items-center justify-start flex-wrap'>
+          <span className='mr-5'>{text1}</span>
+          <Image
+            src='/images/gif/mm_team.gif'
+            alt='MadreMía logo'
+            unoptimized
+            width={300}
+            height={300}
+            quality={100}
+            priority
+            className='max-h-[100px] max-w-[100px] lg:max-h-[300px] lg:max-w-[300px]'
+          />
+          <span className='mx-5'>{text2}</span>
+          <span className=''>{text3}</span>
+        </div>
       </div>
     </div>
   );
