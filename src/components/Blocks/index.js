@@ -236,11 +236,10 @@ export const BlockUsHeading = ({ data = {} }) => {
           </div>
         )}
         <Image
-          src='/images/gif/us.gif'
-          alt='MadreMía logo'
-          unoptimized
-          width={800}
-          height={800}
+          src='/images/static/2.jpg'
+          alt='MadreMía team'
+          width={750}
+          height={453}
           quality={100}
           priority
           className='max-h-[200px] max-w-[200px] lg:max-h-[600px] lg:max-w-[600px]'
