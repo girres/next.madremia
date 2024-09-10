@@ -9,6 +9,15 @@ import {
   BlockServices,
 } from '@/components/Blocks';
 
+export async function generateMetadata({ params: { lang = 'es' } }) {
+  const dict = await getDictionary(lang);
+  const data = dict?.us || {};
+  return {
+    title: data.seo.title,
+    description: data.seo.description,
+  };
+}
+
 export default async function Page({ params: { lang = 'es' } }) {
   const dict = await getDictionary(lang);
   const data = dict?.us || {};

@@ -302,8 +302,8 @@ export const BlockProfiles = ({ data = {} }) => {
               <div>
                 <Image
                   src={item.image}
-                  alt={item.title}
-                  text={item.title}
+                  alt={item.name}
+                  text={item.name}
                   width={520}
                   height={750}
                   quality={100}

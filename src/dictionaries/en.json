@@ -7,10 +7,18 @@
     "title": "Home"
   },
   "us": {
-    "title": "Us"
+    "title": "Us",
+    "seo": {
+      "title": "Let's start. Let's work together | MadreMía",
+      "description": "Discover the story of MadreMia, a tech and digital marketing agency focused on delivering innovative solutions for your business."
+    }
   },
   "diagnosis": {
-    "title": "Diagnosis"
+    "title": "Diagnosis",
+    "seo": {
+      "title": "Describe your needs and get your digital diagnosis | MadreMía",
+      "description": "DUse our digital diagnosis tool. Share your needs and discover how MadreMia can help boost your business online."
+    }
   },
   "menu": {
     "home": "Home",

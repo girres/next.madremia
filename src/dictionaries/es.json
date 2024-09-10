@@ -7,10 +7,18 @@
     "title": "Inicio"
   },
   "us": {
-    "title": "Nosotros"
+    "title": "Nosotros",
+    "seo": {
+      "title": "Un poco de nosotros, un poco de historia | MadreMía",
+      "description": "Descubre la historia de MadreMia, una agencia de tecnología y marketing digital enfocada en ofrecer soluciones innovadoras para tu negocio."
+    }
   },
   "diagnosis": {
-    "title": "Diagnóstico"
+    "title": "Diagnóstico",
+    "seo": {
+      "title": "Describe tus necesidades y obtén tu diagnóstico digital | MadreMía",
+      "description": "Accede a nuestra herramienta de diagnóstico digital. Describe tus necesidades y descubre cómo MadreMia puede impulsar tu negocio en línea."
+    }
   },
   "menu": {
     "home": "Inicio",
