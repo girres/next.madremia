@@ -42,29 +42,29 @@
       "items": [
         {
           "title": "2020",
-          "heading": "Converting Followers into Customers: Improving Strategies",
-          "description": "Our client had created their brand and social media presence, but they needed to convert their audience into actual buyers. They felt that they had a lot of followers, but something was not right in the strategy to turn them into customers.",
+          "heading": "Strategy: Turning followers into customers",
+          "description": "Our client had built a solid brand and a strong social media presence but struggled to convert their audience into paying customers. With a large following but little sales traction, we stepped in to refine their strategy and turn followers into loyal buyers.",
           "service": ["Digital Marketing"],
           "image": "/images/projects/ESD.jpg"
         },
         {
           "title": "2022",
-          "heading": "Turning Climate Change Ideas into Technological Reality",
-          "description": "A Colombian Start-up had a great idea about Climate Change and carbon footprint measurement. They had a team of experts and knew they could capitalize on all that information, but they needed a technological ally to materialize their idea.",
+          "heading": "Transforming a Climate Change idea into a digital platform",
+          "description": "A Colombian start-up had an innovative idea focused on climate change and carbon footprint tracking. They had the expertise, but they needed a tech partner to bring their vision to life. We developed a seamless digital platform and app to make their concept a reality.",
           "service": ["Web and App Development ", "UX/UI Design"],
           "image": "/images/projects/CarbonBox.jpg"
         },
         {
           "title": "2023",
-          "heading": "Urgent Modernization: Transforming Logistics and Sales",
-          "description": "Our client had a major challenge with their logistics operation and sales force. Their channels were too traditional and they felt they were falling behind their competition. A technological leap was urgently needed. They were compelled to modernize.",
+          "heading": "Leveraging technology for business transformation",
+          "description": "Facing operational challenges in logistics and sales, our client knew their outdated systems and tech tools were holding them back. They turned to us for a technological upgrade, and we implemented the right solutions to drive efficiency and push their business forward.",
           "service": ["E-commerce", "Web and App Development"],
           "image": "/images/projects/ZonaHerragro.jpg"
         },
         {
           "title": "2023",
-          "heading": "From Idea to Action in 3 Weeks",
-          "description": "In New Jersey (USA), an entrepreneur was ready to take the next step with her project. She had completed her business model and administrative tasks. To start selling, the only thing missing was to bring her brand to life and create her own website.",
+          "heading": "From idea to execution in few weeks",
+          "description": "An entrepreneur in New Jersey (US) was ready to launch her business but needed help with branding and a website. We fast-tracked the process, taking her from concept to a fully operational online presence, ready to engage and convert customers in record time.",
           "service": [
             "Web and App Development",
             "Branding",
@@ -75,15 +75,15 @@
         },
         {
           "title": "2023",
-          "heading": "Cost-Effective Technological Optimization with AWS",
-          "description": "A project focused on electronic device rental had been in operation for several years, but its technology was not optimal. After much planning and execution, we were able to centralize its infrastructure on Amazon Web Services in a functional and very cost-effective manner.",
+          "heading": "Optimizing technology with AWS for maximum efficiency",
+          "description": "A long-standing project in electronic device rentals was weighed down by inefficient tech. We restructured their entire infrastructure using Amazon Web Services, delivering a solution that was both highly functional and cost-effective.",
           "service": ["Cloud services", "Web and App Development"],
           "image": "/images/projects/Reteki.jpg"
         },
         {
           "title": "2024",
-          "heading": "Customized AI without Million Dollar Investment",
-          "description": "The general manager of a major industrial company in Colombia was convinced that he needed Artificial Intelligence, but he couldn't make a million-dollar initial investment. He contacted us and we created his own Chat GPT, mainly fueled by his own databases.",
+          "heading": "AI innovation on a budget",
+          "description": "A leading industrial company in Colombia needed to integrate AI (Artificial intelligence) but had limited resources. We collaborated to design a custom GPT-powered AI system, leveraging their own data for a personalized solution—without the hefty price tag.",
           "service": ["AI", "Low Code / No Code Solutions"],
           "image": "/images/projects/GPT.jpg"
         }
