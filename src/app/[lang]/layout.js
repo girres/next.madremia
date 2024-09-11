@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 // CSS
 import '@/styles/globals.scss';
 
@@ -19,6 +21,8 @@ export async function generateMetadata({ params: { lang = 'es' } }) {
     description: dict.seo.description,
     openGraph: {
       images: '/images/seo-mm.jpg',
+      type: 'website',
+      logo: '/images/logo.png',
     },
     alternates: {
       canonical:
@@ -41,6 +45,7 @@ export default function RootLayout({ children, params: { lang = 'es' } }) {
     <html lang={lang}>
       <body>{children}</body>
       {GA_TAG && <GoogleAnalytics gaId={GA_TAG} />}
+      <Script src='//madremia.s3.us-west-2.amazonaws.com/signature.js' />
     </html>
   );
 }
