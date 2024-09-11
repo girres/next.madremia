@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "No necesitas ser experto en tecnología, necesitas un aliado | MadreMía",
-    "description": "MadreMia convierte tus ideas en experiencias digitales, con diseño, desarrollo y marketing web para hacer crecer tu presencia en línea de manera única"
+    "title": "No necesitas ser experto en tecnología, necesitas un aliado | Agencia MadreMía",
+    "description": "Las personas y empresas no tienen que ser expertos en tecnología para desarrollar sus proyectos. Es más inteligente y rentable aliarse con el equipo indicado."
   },
   "home": {
     "title": "Inicio"
@@ -9,14 +9,14 @@
   "us": {
     "title": "Nosotros",
     "seo": {
-      "title": "Un poco de nosotros, un poco de historia | MadreMía",
+      "title": "Un poco de nosotros, un poco de historia | Agencia MadreMía",
       "description": "Descubre la historia de MadreMia, una agencia de tecnología y marketing digital enfocada en ofrecer soluciones innovadoras para tu negocio."
     }
   },
   "diagnosis": {
     "title": "Diagnóstico",
     "seo": {
-      "title": "Describe tus necesidades y obtén tu diagnóstico digital | MadreMía",
+      "title": "Describe tus necesidades y obtén tu diagnóstico digital | Agencia MadreMía",
       "description": "Accede a nuestra herramienta de diagnóstico digital. Describe tus necesidades y descubre cómo MadreMia puede impulsar tu negocio en línea."
     }
   },
@@ -183,7 +183,7 @@
           "name": "Milena Tamayo",
           "email": "social@agenciamadremia.com",
           "position": "Marketing",
-          "image": "/images/team/milena.jpg"
+          "image": "/images/team/milena-tamayo.jpg"
         },
         {
           "name": "Bryan Giraldo",
