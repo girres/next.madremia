@@ -28,7 +28,22 @@
   "footer": {
     "title1": "Ubicaciones",
     "title2": "Síguenos",
-    "textFooter": "Agencia MadreMía"
+    "textFooter": "Agencia MadreMía",
+    "title3": "Legal",
+    "legal": [
+      {
+        "title": "Términos y Condiciones",
+        "url": "/legal/terms-conditions"
+      },
+      {
+        "title": "Política de Tratamiento de Datos",
+        "url": "/legal/data-policy"
+      },
+      {
+        "title": "Política de Privacidad",
+        "url": "/legal/privacy-policy"
+      }
+    ]
   },
   "blocks": {
     "hero": {

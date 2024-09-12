@@ -28,7 +28,22 @@
   "footer": {
     "title1": "Locations",
     "title2": "Social media",
-    "textFooter": "MadreMía agency"
+    "textFooter": "MadreMía agency",
+    "title3": "Legal",
+    "legal": [
+      {
+        "title": "Terms and Conditions",
+        "url": "/legal/terms-conditions"
+      },
+      {
+        "title": "Data Policy",
+        "url": "/legal/data-policy"
+      },
+      {
+        "title": "Privacy Policy",
+        "url": "/legal/privacy-policy"
+      }
+    ]
   },
   "blocks": {
     "hero": {
