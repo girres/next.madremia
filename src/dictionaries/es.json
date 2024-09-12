@@ -221,5 +221,11 @@
         "Inteligencia Artificial (IA)"
       ]
     }
+  },
+  "cookies": {
+    "text1": "Esta web utiliza ",
+    "text2": "cookies 🍪",
+    "text3": " para mejorar la experiencia de usuario.",
+    "textButton": "Aceptar"
   }
 }

@@ -221,5 +221,11 @@
         "Artificial Intelligence (AI)"
       ]
     }
+  },
+  "cookies": {
+    "text1": "This website uses ",
+    "text2": "cookies 🍪",
+    "text3": " to ensure you get the best experience on our website.",
+    "textButton": "Accept"
   }
 }

@@ -10,6 +10,9 @@ import { getDictionary } from '@/app/dictionaries';
 import { GoogleAnalytics } from '@next/third-parties/google';
 const GA_TAG = process.env.NEXT_PUBLIC_GA_TAG || null;
 
+// Components
+import { CookieBanner } from '@/components/Cookies';
+
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }];
 }
@@ -46,6 +49,7 @@ export default function RootLayout({ children, params: { lang = 'es' } }) {
       <body>{children}</body>
       {GA_TAG && <GoogleAnalytics gaId={GA_TAG} />}
       <Script src='//madremia.s3.us-west-2.amazonaws.com/signature.js' />
+      <CookieBanner lang={lang} />
     </html>
   );
 }
