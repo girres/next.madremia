@@ -185,13 +185,13 @@
         {
           "name": "Adrian Giraldo",
           "email": "adrian@agenciamadremia.com",
-          "position": "Sales",
+          "position": "Ventas",
           "image": "/images/team/adrian.jpg"
         },
         {
           "name": "Harold Giraldo",
           "email": "harold@agenciamadremia.com",
-          "position": "Software Engineer",
+          "position": "Ingeniero de Software",
           "image": "/images/team/harold.jpg"
         },
         {
@@ -203,7 +203,7 @@
         {
           "name": "Bryan Giraldo",
           "email": "bryan@agenciamadremia.com",
-          "position": "UX/UI Designer",
+          "position": "Diseño UX/UI",
           "image": "/images/team/bryan.jpg"
         }
       ]

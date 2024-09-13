@@ -319,7 +319,9 @@ export const BlockProfiles = ({ data = {} }) => {
                 </Link>
               </p>
               {/* Position */}
-              <p className='text-lg fontBold text-mm-orange'>{item.position}</p>
+              <p className='text-lg fontMedium text-mm-orange'>
+                {item.position}
+              </p>
             </div>
           ))}
         </div>
