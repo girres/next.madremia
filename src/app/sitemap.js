@@ -20,8 +20,8 @@ export default function sitemap() {
         priority: 0.8,
         alternates: {
           languages: {
-            es: `${url}/diagnosis/es`,
-            en: `${url}/diagnosis/en`
+            es: `${url}/es/diagnosis`,
+            en: `${url}/en/diagnosis`
           }
         }
       },
@@ -32,10 +32,22 @@ export default function sitemap() {
         priority: 0.5,
         alternates: {
           languages: {
-            es: `${url}/diagnosis/es`,
-            en: `${url}/diagnosis/en`
+            es: `${url}/es/diagnosis`,
+            en: `${url}/en/diagnosis`
           }
         }
       },
+      {
+        url: `${url}/legal/terms-conditions`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.2,
+        alternates: {
+          languages: {
+            es: `${url}/es/legal/terms-conditions`,
+            en: `${url}/en/legal/terms-conditions`
+          }
+        }
+      }
     ]
   }
