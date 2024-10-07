@@ -1,13 +1,44 @@
 'use client';
 
+import { useEffect, useRef, useTransition } from 'react';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/routing';
 import Image from 'next/image';
 import { clsx } from 'clsx';
-import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 
-import { useMessages } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslations, useMessages } from 'next-intl';
+import { Link, routing } from '@/i18n/routing';
+
+const LocaleSwitcher = () => {
+  const locale = useLocale();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const t = useTranslations('i18n');
+
+  function onSelect(nextLocale) {
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  }
+
+  return (
+    <>
+      {routing.locales.map((cur) => (
+        <button
+          className={clsx(locale === cur && 'active')}
+          disabled={isPending}
+          onClick={() => onSelect(cur)}
+          key={cur}
+          value={cur}
+        >
+          {t(cur)}
+        </button>
+      ))}
+    </>
+  );
+};
 
 const Comp = () => {
   const messages = useMessages();
@@ -16,7 +47,7 @@ const Comp = () => {
   const navRef = useRef(null);
 
   const pathname = usePathname();
-  const [, lang = 'es', pageName = '/'] = pathname.split('/');
+  const [, pageName = '/'] = pathname.split('/');
 
   // Add "/" in the pageName as prefix if not exists.
   let finalPageName = pageName;
@@ -90,12 +121,7 @@ const Comp = () => {
             <MenuLinks />
           </ul>
           <div className='language-switch space-x-3 flex items-center'>
-            <Link href={'/es'} className={clsx(lang === 'es' && 'active')}>
-              ESP
-            </Link>
-            <Link href={'/en'} className={clsx(lang === 'en' && 'active')}>
-              ENG
-            </Link>
+            <LocaleSwitcher />
             <div className='mobile-menu block lg:hidden'>
               <div className='dropdown dropdown-end'>
                 <div
