@@ -1,13 +1,8 @@
-// Dictionary.
-import { getDictionary } from '@/app/dictionaries';
-
 export const metadata = {
   title: 'Política de Privacidad | Madremía',
 };
 
-export default async function Page({ params: { lang = 'es' } }) {
-  // eslint-disable-next-line no-unused-vars
-  const dict = await getDictionary(lang);
+export default async function Page() {
   return (
     <div>
       <h1 className='text-3xl font-bold mb-10'>Política de Privacidad</h1>

@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
-// import { ArrowTurnRightDownIcon } from '@heroicons/react/20/solid';
 import { clsx } from 'clsx';
+
+import { useTranslations, useMessages } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 const Icon = () => (
   <span className='icon'>
@@ -21,21 +22,22 @@ const Icon = () => (
   </span>
 );
 
-export const BlockHero = ({ dict = {} }) => {
-  const { hero: terms = {} } = dict?.blocks || {};
+export const BlockHero = () => {
+  const t = useTranslations('blocks.hero');
+
   return (
     <div className='bg-mm-black lg:h-screen relative'>
       <div className='w-full h-full pt-20 lg:pt-0 lg:absolute top-0 left-0 right-0 bottom-0 lg:flex lg:flex-col items-center justify-center'>
         <div className='w-full h-full lg:flex justify-end flex-col'>
           <p className='text-mm-beige text-[7vw] leading-[7vw] fontBold mm-container py-[5%] lg:pb-[5%]'>
-            {terms?.text1 ?? '---'}
+            {t('text1') ?? '---'}
             {` `}
-            <span className='text-mm-orange'>{terms?.text2 ?? '---'}</span>
+            <span className='text-mm-orange'>{t('text2') ?? '---'}</span>
           </p>
           <Marquee>
             <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>
-                {terms?.text3 ?? '---'}
+                {t('text3') ?? '---'}
               </p>
               <Image
                 src='/images/gif/mm_team.gif'
@@ -48,7 +50,7 @@ export const BlockHero = ({ dict = {} }) => {
                 className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
               />
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] tracking-wide'>
-                {terms?.text4 ?? '---'}
+                {t('text4') ?? '---'}
               </p>
               <Image
                 src='/images/static/1.jpg'
@@ -75,77 +77,139 @@ export const BlockSlideHero = () => {
   );
 };
 
-export const BlockProjects = ({ dict = {} }) => {
-  const { projects = {} } = dict?.blocks || {};
-  const { title = null, items = [] } = projects || {};
-
-  if (!items || items.length < 1) return null;
+export const BlockProjects = () => {
+  const messages = useMessages();
+  const t = useTranslations('blocks.projects');
+  const projects = Object.keys(messages.blocks.projects.items);
 
   return (
     <div className='bg-mm-beige py-10'>
-      {title && (
-        <div className='block-title px-5 my-20'>
-          <h2>
-            {title}
-            <Icon className='icon' />
-          </h2>
-        </div>
-      )}
+      <div className='block-title px-5 my-20'>
+        <h2>
+          {t('title')}
+          <Icon className='icon' />
+        </h2>
+      </div>
       <div className='space-y-5 mm-container'>
-        {items.map((project, index) => (
-          <div key={index} className='flex w-full flex-col md:flex-row'>
-            <div className='max-w-[700px]'>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={1200}
-                height={750}
-                quality={100}
-                priority
-              />
-            </div>
-            <div className='py-5 md:py-0 md:px-5 w-full text-sm'>
-              <p className='text-mm-black/50 font-bold mb-2'>{project.title}</p>
-              <div className='mb-10'>
-                <p className='fontBold mb-3 text-lg'>
-                  {project?.heading ?? '--'}
-                </p>
-                <p className=''>{project.description}</p>
+        {projects.map((index) => {
+          const tags =
+            messages?.blocks?.projects?.items?.[index]?.service || [];
+          return (
+            <div key={index} className='flex w-full flex-col md:flex-row'>
+              <div className='max-w-[700px]'>
+                <Image
+                  src={t(`items.${index}.image`)}
+                  alt={t(`items.${index}.title`)}
+                  width={1200}
+                  height={750}
+                  quality={100}
+                  priority
+                />
               </div>
-              <div>
-                <div className='badge-service-container'>
-                  {project.service.map((service, index) => (
-                    <div className='badge-service' key={index}>
-                      {service}
-                    </div>
-                  ))}
+              <div className='py-5 md:py-0 md:px-5 w-full text-sm'>
+                <p className='text-mm-black/50 font-bold mb-2'>
+                  {t(`items.${index}.title`)}
+                </p>
+                <div className='mb-10'>
+                  <p className='fontBold mb-3 text-lg'>
+                    {t(`items.${index}.heading`)}
+                  </p>
+                  <p className=''>{t(`items.${index}.description`)}</p>
+                </div>
+                <div>
+                  <div className='badge-service-container'>
+                    {tags.map((service, index) => (
+                      <div className='badge-service' key={index}>
+                        {service}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export const BlockClients = ({ dict = {} }) => {
-  const { clients = {} } = dict?.blocks || {};
-  const { title = null, items = [] } = clients || {};
-
-  if (!items || items.length < 1) return null;
+export const BlockClients = () => {
+  const t = useTranslations('blocks.clients');
+  const clients = [
+    {
+      title: 'anm',
+      image: '/images/clients/anm.png',
+    },
+    {
+      title: 'esd',
+      image: '/images/clients/esd.png',
+    },
+    {
+      title: 'fixer',
+      image: '/images/clients/fixer.png',
+    },
+    {
+      title: 'herragro',
+      image: '/images/clients/herragro.png',
+    },
+    {
+      title: 'hotelcasablanca',
+      image: '/images/clients/hotelcasablanca.png',
+    },
+    {
+      title: 'raw',
+      image: '/images/clients/raw.png',
+    },
+    {
+      title: 'rtvc',
+      image: '/images/clients/rtvc.png',
+    },
+    {
+      title: 'vecol',
+      image: '/images/clients/vecol.png',
+    },
+    {
+      title: 'carbonbox',
+      image: '/images/clients/carbonbox.png',
+    },
+    {
+      title: 'espaciocontinuo',
+      image: '/images/clients/espaciocontinuo.png',
+    },
+    {
+      title: 'goclean',
+      image: '/images/clients/goclean.png',
+    },
+    {
+      title: 'panasonic',
+      image: '/images/clients/panasonic.png',
+    },
+    {
+      title: 'reteki',
+      image: '/images/clients/reteki.png',
+    },
+    {
+      title: 'saudia',
+      image: '/images/clients/saudia.png',
+    },
+    {
+      title: 'viva',
+      image: '/images/clients/viva.png',
+    },
+  ];
 
   return (
     <div className='mt-20 mb-28'>
       <div className='block-title px-5 mb-20'>
         <h2>
-          {title ?? '-'}
+          {t('title')}
           <Icon className='icon' />
         </h2>
       </div>
-      <Marquee speed='20' autoFill direction='right'>
+      <Marquee speed='50' autoFill direction='right'>
         <div className='flex justify-between items-center w-full'>
-          {items.map((item, index) => (
+          {clients.map((item, index) => (
             <Image
               src={item.image}
               alt={item.title}
@@ -162,9 +226,14 @@ export const BlockClients = ({ dict = {} }) => {
   );
 };
 
-export const BlockDiagnosis = ({ dict = {} }) => {
-  const { diagnosis: block = {} } = dict?.blocks || {};
-  const { title = null, text1 = null, text2 = null } = block || {};
+export const BlockDiagnosis = () => {
+  const messages = useMessages();
+  const {
+    title = null,
+    text1 = null,
+    text2 = null,
+    textClick = null,
+  } = messages.blocks.diagnosis || {};
   return (
     <div className='bg-mm-black py-10'>
       {title && (
@@ -185,7 +254,7 @@ export const BlockDiagnosis = ({ dict = {} }) => {
             )}
             <Link href='/diagnosis'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
-                {block?.textClick ?? 'Click'}
+                {textClick ?? 'Click'}
               </div>
             </Link>
             {text2 && (
@@ -195,7 +264,7 @@ export const BlockDiagnosis = ({ dict = {} }) => {
             )}
             <Link href='/diagnosis'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
-                {block?.textClick ?? 'Click'}
+                {textClick ?? 'Click'}
               </div>
             </Link>
           </div>
@@ -205,16 +274,14 @@ export const BlockDiagnosis = ({ dict = {} }) => {
   );
 };
 
-export const BlockUsHeading = ({ data = {} }) => {
-  const { text1 = null, text2 = null, text3 = null } = data || {};
+export const BlockUsHeading = () => {
+  const t = useTranslations('blocks.us');
   return (
     <div className='block'>
       <div className='hidden lg:flex items-center flex-wrap space-x-20 text-left'>
-        {text1 && (
-          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
-            {text1}
-          </div>
-        )}
+        <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+          {t('text1')}
+        </div>
         <Image
           src='/images/gif/mm_team.gif'
           alt='MadreMía logo'
@@ -225,16 +292,12 @@ export const BlockUsHeading = ({ data = {} }) => {
           priority
           className='max-h-[100px] max-w-[100px] lg:max-h-[300px] lg:max-w-[300px]'
         />
-        {text2 && (
-          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
-            {text2}
-          </div>
-        )}
-        {text3 && (
-          <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
-            {text3}
-          </div>
-        )}
+        <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+          {t('text2')}
+        </div>
+        <div className='uppercase fontDGEBold text-[20vw] leading-[20vw]'>
+          {t('text3')}
+        </div>
         <Image
           src='/images/static/2.jpg'
           alt='MadreMía team'
@@ -247,7 +310,7 @@ export const BlockUsHeading = ({ data = {} }) => {
       </div>
       <div className='block lg:hidden'>
         <div className='uppercase fontDGEBold text-[20vw] leading-[20vw] tracking-wider flex items-center justify-start flex-wrap'>
-          <span className='mr-5'>{text1}</span>
+          <span className='mr-5'>{t('text1')}</span>
           <Image
             src='/images/gif/mm_team.gif'
             alt='MadreMía logo'
@@ -258,37 +321,37 @@ export const BlockUsHeading = ({ data = {} }) => {
             priority
             className='max-h-[100px] max-w-[100px] lg:max-h-[300px] lg:max-w-[300px]'
           />
-          <span className='mx-5'>{text2}</span>
-          <span className=''>{text3}</span>
+          <span className='mx-5'>{t('text2')}</span>
+          <span className=''>{t('text3')}</span>
         </div>
       </div>
     </div>
   );
 };
 
-export const BlockText = ({ data = {}, env = false }) => {
-  const { title = null, text1 = null, text2 = null } = data || {};
+export const BlockText = ({ env = false }) => {
+  const t = useTranslations('blocks.us2');
 
   return (
     <div className={clsx('py-10 lg:py-20', env && 'env')}>
-      {title && (
-        <div className='block-title mb-10'>
-          <h2>
-            {title}
-            <Icon className='icon' />
-          </h2>
-        </div>
-      )}
+      <div className='block-title mb-10'>
+        <h2>
+          {t('title')}
+          <Icon className='icon' />
+        </h2>
+      </div>
       <div className='text-sm max-w-[700px]'>
-        {text1 && <p className='py-3'>{text1}</p>}
-        {text2 && <p className='py-3'>{text2}</p>}
+        <p className='py-3'>{t('text1')}</p>
+        <p className='py-3'>{t('text2')}</p>
       </div>
     </div>
   );
 };
 
-export const BlockProfiles = ({ data = {} }) => {
-  const { items = [] } = data || {};
+export const BlockProfiles = () => {
+  const messages = useMessages();
+  const t = useTranslations('blocks.us3');
+  const items = Object.keys(messages.blocks.us3.items);
 
   if (!items || items.length < 1) return null;
 
@@ -296,13 +359,13 @@ export const BlockProfiles = ({ data = {} }) => {
     <div className='bg-mm-beige py-10 flex justify-center lg:justify-end'>
       <div className='max-w-[1200px]'>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10'>
-          {items.map((item, index) => (
+          {items.map((index) => (
             <div key={index} className='overflow-hidden'>
               <div>
                 <Image
-                  src={item.image}
-                  alt={item.name}
-                  text={item.name}
+                  src={t(`items.${index}.image`)}
+                  alt={t(`items.${index}.name`)}
+                  text={t(`items.${index}.name`)}
                   width={520}
                   height={750}
                   quality={100}
@@ -311,16 +374,19 @@ export const BlockProfiles = ({ data = {} }) => {
                 />
               </div>
               {/* Name */}
-              <p className='fontMedium text-lg'>{item.name}</p>
+              <p className='fontMedium text-lg'>{t(`items.${index}.name`)}</p>
               {/* Email */}
               <p className='text-gray-500 font-light underline text-sm'>
-                <Link href={`mailto:${item.email}`} targrt='_blank'>
-                  {item.email}
+                <Link
+                  href={`mailto:${t(`items.${index}.email`)}`}
+                  targrt='_blank'
+                >
+                  {t(`items.${index}.email`)}
                 </Link>
               </p>
               {/* Position */}
               <p className='text-lg fontMedium text-mm-orange'>
-                {item.position}
+                {t(`items.${index}.position`)}
               </p>
             </div>
           ))}
@@ -330,21 +396,19 @@ export const BlockProfiles = ({ data = {} }) => {
   );
 };
 
-export const BlockServices = ({ data = {} }) => {
-  const { title = null, items = [] } = data || {};
-
-  if (!items || items.length < 1) return null;
+export const BlockServices = () => {
+  const messages = useMessages();
+  const t = useTranslations('blocks.services');
+  const items = messages.blocks.services.items;
 
   return (
     <div className={clsx('py-10 lg:py-20')}>
-      {title && (
-        <div className='block-title mb-10'>
-          <h2>
-            {title}
-            <Icon className='icon' />
-          </h2>
-        </div>
-      )}
+      <div className='block-title mb-10'>
+        <h2>
+          {t('title')}
+          <Icon className='icon' />
+        </h2>
+      </div>
       <div className='badge-service-container max-w-[700px] py-10'>
         {items.map((service, index) => (
           <div className='badge-service' key={index}>

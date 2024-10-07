@@ -1,24 +1,59 @@
 'use client';
 
+import { useEffect, useRef, useTransition } from 'react';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/routing';
 import Image from 'next/image';
-import Link from 'next/link';
 import { clsx } from 'clsx';
-import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
-import { setLocaleCookie } from '@/app/dictionaries';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 
-const Comp = ({ dict = {} }) => {
+import { useTranslations, useMessages } from 'next-intl';
+import { Link, routing } from '@/i18n/routing';
+
+const LocaleSwitcher = () => {
+  const locale = useLocale();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const t = useTranslations('i18n');
+
+  function onSelect(nextLocale) {
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  }
+
+  return (
+    <>
+      {routing.locales.map((cur) => (
+        <button
+          className={clsx(locale === cur && 'active')}
+          disabled={isPending}
+          onClick={() => onSelect(cur)}
+          key={cur}
+          value={cur}
+        >
+          {t(cur)}
+        </button>
+      ))}
+    </>
+  );
+};
+
+const Comp = () => {
+  const messages = useMessages();
+  const items = messages.menu;
   // Ref for sticky header
   const navRef = useRef(null);
 
   const pathname = usePathname();
-  const [, lang = 'es', pageName = null] = pathname.split('/');
+  const [, pageName = '/'] = pathname.split('/');
 
-  // Set the locale cookie on first render.
-  useEffect(() => {
-    setLocaleCookie(lang ?? 'en');
-  }, [lang]);
+  // Add "/" in the pageName as prefix if not exists.
+  let finalPageName = pageName;
+  if (pageName.charAt(0) !== '/') {
+    finalPageName = `/${pageName}`;
+  }
 
   useEffect(() => {
     const isSticky = () => {
@@ -49,34 +84,24 @@ const Comp = ({ dict = {} }) => {
 
   const MenuLinks = () => (
     <>
-      <li>
-        <Link
-          href='/'
-          className={clsx(
-            (pathname === '/es' || pathname === '/en') && 'active'
-          )}
-        >
-          {dict.menu.home}
-        </Link>
-      </li>
-      <li>
-        <Link className={clsx(pathname.includes('/us') && 'active')} href='/us'>
-          {dict.menu.us}
-        </Link>
-      </li>
-      <li>
-        <Link
-          className={clsx(pathname.includes('/diagnosis') && 'active')}
-          href='/diagnosis'
-        >
-          {dict.menu.diagnosis}
-        </Link>
-      </li>
+      {items.map((item, index) => (
+        <li key={index}>
+          <Link
+            href={item.path}
+            className={clsx(finalPageName === item.path && 'active')}
+          >
+            {item.name}
+          </Link>
+        </li>
+      ))}
     </>
   );
 
   return (
-    <header ref={navRef} className={clsx(pageName && 'light')}>
+    <header
+      ref={navRef}
+      className={clsx(finalPageName && finalPageName !== '/' && 'light')}
+    >
       <div className='nav-wrapper bg-mm-black py-0 px-0 lg:p-5'>
         <nav className='mm-container flex items-center lg:items-start justify-between py-2'>
           <div className='logo'>
@@ -96,12 +121,7 @@ const Comp = ({ dict = {} }) => {
             <MenuLinks />
           </ul>
           <div className='language-switch space-x-3 flex items-center'>
-            <Link href={'/es'} className={clsx(lang === 'es' && 'active')}>
-              ESP
-            </Link>
-            <Link href={'/en'} className={clsx(lang === 'en' && 'active')}>
-              ENG
-            </Link>
+            <LocaleSwitcher />
             <div className='mobile-menu block lg:hidden'>
               <div className='dropdown dropdown-end'>
                 <div

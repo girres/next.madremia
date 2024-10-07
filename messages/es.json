@@ -1,4 +1,8 @@
 {
+  "i18n": {
+    "es": "ESP",
+    "en": "ENG"
+  },
   "seo": {
     "title": "No necesitas ser experto en tecnología, necesitas un aliado | Agencia MadreMía",
     "description": "Las personas y empresas no tienen que ser expertos en tecnología para desarrollar sus proyectos. Es más inteligente y rentable aliarse con el equipo indicado."
@@ -20,11 +24,20 @@
       "description": "Accede a nuestra herramienta de diagnóstico digital. Describe tus necesidades y descubre cómo MadreMia puede impulsar tu negocio en línea."
     }
   },
-  "menu": {
-    "home": "Inicio",
-    "us": "Nosotros",
-    "diagnosis": "Diagnóstico"
-  },
+  "menu": [
+    {
+      "name": "Inicio",
+      "path": "/"
+    },
+    {
+      "name": "Nosotros",
+      "path": "/us"
+    },
+    {
+      "name": "Diagnóstico",
+      "path": "/diagnosis"
+    }
+  ],
   "footer": {
     "title1": "Ubicaciones",
     "title2": "Síguenos",
@@ -105,69 +118,7 @@
       ]
     },
     "clients": {
-      "title": "Nuestros Clientes",
-      "items": [
-        {
-          "title": "anm",
-          "image": "/images/clients/anm.png"
-        },
-        {
-          "title": "esd",
-          "image": "/images/clients/esd.png"
-        },
-        {
-          "title": "fixer",
-          "image": "/images/clients/fixer.png"
-        },
-        {
-          "title": "herragro",
-          "image": "/images/clients/herragro.png"
-        },
-        {
-          "title": "hotelcasablanca",
-          "image": "/images/clients/hotelcasablanca.png"
-        },
-        {
-          "title": "raw",
-          "image": "/images/clients/raw.png"
-        },
-        {
-          "title": "rtvc",
-          "image": "/images/clients/rtvc.png"
-        },
-        {
-          "title": "vecol",
-          "image": "/images/clients/vecol.png"
-        },
-        {
-          "title": "carbonbox",
-          "image": "/images/clients/carbonbox.png"
-        },
-        {
-          "title": "espaciocontinuo",
-          "image": "/images/clients/espaciocontinuo.png"
-        },
-        {
-          "title": "goclean",
-          "image": "/images/clients/goclean.png"
-        },
-        {
-          "title": "panasonic",
-          "image": "/images/clients/panasonic.png"
-        },
-        {
-          "title": "reteki",
-          "image": "/images/clients/reteki.png"
-        },
-        {
-          "title": "saudia",
-          "image": "/images/clients/saudia.png"
-        },
-        {
-          "title": "viva",
-          "image": "/images/clients/viva.png"
-        }
-      ]
+      "title": "Hemos trabajado"
     },
     "diagnosis": {
       "text1": "Veamos qué",
