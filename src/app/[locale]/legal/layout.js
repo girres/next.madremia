@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 
-// Dictionary.
-import { getDictionary } from '@/app/dictionaries';
-
-export default async function Layout({ params: { lang = 'en' }, children }) {
-  const dict = await getDictionary(lang);
+export default async function Layout({ children }) {
   return (
     <>
       <main className='mm-container h-auto min-h-screen relative'>
@@ -29,7 +25,7 @@ export default async function Layout({ params: { lang = 'en' }, children }) {
           {children}
         </div>
       </main>
-      <Footer dict={dict} />
+      <Footer />
     </>
   );
 }

@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useMessages } from 'next-intl';
 
 const Comp = ({ dict = {} }) => {
-  const data = dict?.footer || {};
+  const messages = useMessages();
+  const data = messages.footer || {};
   const { legal = [] } = data;
   return (
     <footer className='bg-mm-black text-mm-beige'>

@@ -1,24 +1,28 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { clsx } from 'clsx';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { setLocaleCookie } from '@/app/dictionaries';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 
-const Comp = ({ dict = {} }) => {
+import { useMessages } from 'next-intl';
+import { Link } from '@/i18n/routing';
+
+const Comp = () => {
+  const messages = useMessages();
+  const items = messages.menu;
   // Ref for sticky header
   const navRef = useRef(null);
 
   const pathname = usePathname();
-  const [, lang = 'es', pageName = null] = pathname.split('/');
+  const [, lang = 'es', pageName = '/'] = pathname.split('/');
 
-  // Set the locale cookie on first render.
-  useEffect(() => {
-    setLocaleCookie(lang ?? 'en');
-  }, [lang]);
+  // Add "/" in the pageName as prefix if not exists.
+  let finalPageName = pageName;
+  if (pageName.charAt(0) !== '/') {
+    finalPageName = `/${pageName}`;
+  }
 
   useEffect(() => {
     const isSticky = () => {
@@ -49,34 +53,24 @@ const Comp = ({ dict = {} }) => {
 
   const MenuLinks = () => (
     <>
-      <li>
-        <Link
-          href='/'
-          className={clsx(
-            (pathname === '/es' || pathname === '/en') && 'active'
-          )}
-        >
-          {dict.menu.home}
-        </Link>
-      </li>
-      <li>
-        <Link className={clsx(pathname.includes('/us') && 'active')} href='/us'>
-          {dict.menu.us}
-        </Link>
-      </li>
-      <li>
-        <Link
-          className={clsx(pathname.includes('/diagnosis') && 'active')}
-          href='/diagnosis'
-        >
-          {dict.menu.diagnosis}
-        </Link>
-      </li>
+      {items.map((item, index) => (
+        <li key={index}>
+          <Link
+            href={item.path}
+            className={clsx(finalPageName === item.path && 'active')}
+          >
+            {item.name}
+          </Link>
+        </li>
+      ))}
     </>
   );
 
   return (
-    <header ref={navRef} className={clsx(pageName && 'light')}>
+    <header
+      ref={navRef}
+      className={clsx(finalPageName && finalPageName !== '/' && 'light')}
+    >
       <div className='nav-wrapper bg-mm-black py-0 px-0 lg:p-5'>
         <nav className='mm-container flex items-center lg:items-start justify-between py-2'>
           <div className='logo'>
