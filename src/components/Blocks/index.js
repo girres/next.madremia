@@ -207,7 +207,7 @@ export const BlockClients = () => {
           <Icon className='icon' />
         </h2>
       </div>
-      <Marquee speed='20' autoFill direction='right'>
+      <Marquee speed='50' autoFill direction='right'>
         <div className='flex justify-between items-center w-full'>
           {clients.map((item, index) => (
             <Image
