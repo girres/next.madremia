@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import toast, { Toaster } from 'react-hot-toast';
 import {
   FaLinkedin,
@@ -27,13 +27,11 @@ export default function Component({
   const [shareUrl, setShareUrl] = useState('');
 
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const url = new URL(pathname, window.location.origin);
-    url.search = searchParams.toString();
     setShareUrl(url.toString());
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text).then(() => {
