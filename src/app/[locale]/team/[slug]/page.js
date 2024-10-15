@@ -48,7 +48,7 @@ export async function generateMetadata({ params: { slug = null } }) {
   }
 
   return {
-    title: data.name,
+    title: `${data.name} - ${data.position} | MadreMía`,
     openGraph: {
       images: [data.image],
     },
