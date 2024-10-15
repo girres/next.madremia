@@ -139,24 +139,28 @@
       "items": [
         {
           "name": "Adrian Giraldo",
+          "slug": "adrian",
           "email": "adrian@agenciamadremia.com",
           "position": "Ventas",
           "image": "/images/team/adrian.jpg"
         },
         {
           "name": "Harold Giraldo",
+          "slug": "harold",
           "email": "harold@agenciamadremia.com",
           "position": "Ingeniero de Software",
           "image": "/images/team/harold.jpg"
         },
         {
           "name": "Mariana Restrepo",
+          "slug": "mariana",
           "email": "social@agenciamadremia.com",
           "position": "Marketing",
           "image": "/images/team/mariana.jpg"
         },
         {
           "name": "Bryan Giraldo",
+          "slug": "bryan",
           "email": "bryan@agenciamadremia.com",
           "position": "Diseño UX/UI",
           "image": "/images/team/bryan.jpg"
