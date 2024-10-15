@@ -1,4 +1,7 @@
 import { notFound } from 'next/navigation';
+
+import { unstable_setRequestLocale } from 'next-intl/server';
+
 import ProfileCard from '@/components/Blocks/ProfileCard';
 
 const items = [
@@ -61,7 +64,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params: { slug = null } }) {
+export default async function Page({ params: { slug = null, locale } }) {
+  unstable_setRequestLocale(locale);
   const data = items.find((item) => item.slug === slug);
 
   if (!data || !data?.slug) {
