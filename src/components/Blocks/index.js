@@ -34,7 +34,10 @@ export const BlockHero = () => {
             {` `}
             <span className='text-mm-orange'>{t('text2') ?? '---'}</span>
           </p>
-          <Marquee>
+          <div className='p-10 w-full bg-mm-orange text-mm-beige text-3xl'>
+            TEXT GOES HERE
+          </div>
+          {/* <Marquee>
             <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>
                 {t('text3') ?? '---'}
@@ -62,7 +65,7 @@ export const BlockHero = () => {
                 className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
               />
             </div>
-          </Marquee>
+          </Marquee> */}
         </div>
       </div>
     </div>
