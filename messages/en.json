@@ -18,7 +18,7 @@
     }
   },
   "diagnosis": {
-    "title": "Diagnosis",
+    "title": "Diagnosis / Contact",
     "seo": {
       "title": "Describe your needs and get your digital diagnosis | MadreMía",
       "description": "DUse our digital diagnosis tool. Share your needs and discover how MadreMia can help boost your business online."
@@ -34,7 +34,7 @@
       "path": "/us"
     },
     {
-      "name": "Diagnosis",
+      "name": "Contact",
       "path": "/diagnosis"
     }
   ],
@@ -121,8 +121,8 @@
       "title": "We've worked"
     },
     "diagnosis": {
-      "text1": "What do you",
-      "text2": "need",
+      "text1": "Contact",
+      "text2": "Contact",
       "textClick": "Clic here"
     },
     "us": {

@@ -18,7 +18,7 @@
     }
   },
   "diagnosis": {
-    "title": "Diagnóstico",
+    "title": "Diagnóstico / Contacto",
     "seo": {
       "title": "Describe tus necesidades y obtén tu diagnóstico digital | Agencia MadreMía",
       "description": "Accede a nuestra herramienta de diagnóstico digital. Describe tus necesidades y descubre cómo MadreMia puede impulsar tu negocio en línea."
@@ -34,7 +34,7 @@
       "path": "/us"
     },
     {
-      "name": "Diagnóstico",
+      "name": "Contacto",
       "path": "/diagnosis"
     }
   ],
@@ -121,8 +121,8 @@
       "title": "Hemos trabajado"
     },
     "diagnosis": {
-      "text1": "Veamos qué",
-      "text2": "necesitas",
+      "text1": "Contacto",
+      "text2": "Contacto",
       "textClick": "Clic aquí"
     },
     "us": {
