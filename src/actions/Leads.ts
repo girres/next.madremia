@@ -1,16 +1,16 @@
 'use server';
 
-import { createClient } from '../utils/supabase/server';
+import { createClient } from '@/utils/supabase/server';
 
 interface LeadValues {
   name: string;
-  phone: string;
   email: string;
-  documenttype: string;
-  document: string;
-  address: string;
+  phone: string;
   city: string;
   country: string;
+  has_digital_product: boolean;
+  interest_in: string;
+  terms: boolean;
 }
 
 export async function Add(values: LeadValues) {

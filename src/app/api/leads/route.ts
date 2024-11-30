@@ -1,5 +1,5 @@
 import { headers } from 'next/headers';
-import { get as GetLeads } from '../../../actions/Leads';
+import { get as GetLeads } from '@/actions/Leads';
 
 export async function GET() {
   const headersList = await headers();
