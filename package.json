@@ -11,6 +11,8 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@next/third-parties": "^14.2.8",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.46.2",
     "@typeform/embed-react": "^4.1.0",
     "clsx": "^2.1.1",
     "eslint": "^8.55.0",
@@ -30,6 +32,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/node": "22.10.1",
     "daisyui": "^4.12.10",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-next": "^0.0.0",
