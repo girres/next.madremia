@@ -252,7 +252,7 @@ export const BlockDiagnosis = () => {
                 {text1}
               </p>
             )}
-            <Link href='/diagnosis'>
+            <Link href='/contact'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {textClick ?? 'Click'}
               </div>
@@ -262,7 +262,7 @@ export const BlockDiagnosis = () => {
                 {text2}
               </p>
             )}
-            <Link href='/diagnosis'>
+            <Link href='/contact'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {textClick ?? 'Click'}
               </div>
