@@ -34,10 +34,7 @@ export const BlockHero = () => {
             {` `}
             <span className='text-mm-orange'>{t('text2') ?? '---'}</span>
           </p>
-          <div className='p-10 w-full bg-mm-orange text-mm-beige text-3xl'>
-            TEXT GOES HERE
-          </div>
-          {/* <Marquee>
+          <Marquee>
             <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
               <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>
                 {t('text3') ?? '---'}
@@ -65,7 +62,7 @@ export const BlockHero = () => {
                 className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
               />
             </div>
-          </Marquee> */}
+          </Marquee>
         </div>
       </div>
     </div>
@@ -255,7 +252,7 @@ export const BlockDiagnosis = () => {
                 {text1}
               </p>
             )}
-            <Link href='/diagnosis'>
+            <Link href='/contact'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {textClick ?? 'Click'}
               </div>
@@ -265,7 +262,7 @@ export const BlockDiagnosis = () => {
                 {text2}
               </p>
             )}
-            <Link href='/diagnosis'>
+            <Link href='/contact'>
               <div className='text-lg underline text-mm-beige flex items-center justify-center bg-mm-orange h-[150px] w-[150px] lg:h-[200px] hover:scale-125 transition-all'>
                 {textClick ?? 'Click'}
               </div>

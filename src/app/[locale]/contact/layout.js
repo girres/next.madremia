@@ -31,7 +31,7 @@ export default async function Layout({ params: { locale = 'es' }, children }) {
             </div>
             {/* <div className='language-switch space-x-3'>
               <Link
-                href={'/es/diagnosis'}
+                href={'/es/contact'}
                 className={clsx(
                   lang === 'es'
                     ? 'fontExtraB active'
@@ -41,7 +41,7 @@ export default async function Layout({ params: { locale = 'es' }, children }) {
                 ESP
               </Link>
               <Link
-                href={'/en/diagnosis'}
+                href={'/en/contact'}
                 className={clsx(
                   lang === 'en'
                     ? 'fontExtraB active'
