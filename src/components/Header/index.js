@@ -107,7 +107,7 @@ const Comp = () => {
           <div className='logo'>
             <Link href='/'>
               <Image
-                src='/images/logo.png'
+                src='/images/logo-alt.png'
                 alt='MadreMía logo'
                 width={150}
                 height={100}

@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 // Components.
-import { FormEmbed } from '@/components/TypeForm';
+import ContactForm from '@/components/Contact';
 
 export async function generateMetadata({ params: { locale = 'es' } }) {
   const t = await getTranslations({ locale, namespace: 'diagnosis.seo' });
@@ -14,7 +14,7 @@ export async function generateMetadata({ params: { locale = 'es' } }) {
 export default async function Page() {
   return (
     <div className='pt-10 px-5 lg:px-10'>
-      <FormEmbed />
+      <ContactForm />
     </div>
   );
 }

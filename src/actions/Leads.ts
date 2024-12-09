@@ -9,7 +9,7 @@ interface LeadValues {
   city: string;
   country: string;
   has_digital_product: boolean;
-  interest_in: string;
+  interest_in?: string;
   terms: boolean;
 }
 
@@ -24,6 +24,7 @@ export async function Add(values: LeadValues) {
     console.error('Error inserting lead:', error);
     throw new Error(error.message);
   }
+  console.log('🚀 ~ Add ~ data:', data);
 
   return data?.[0]?.id || false;
 }
