@@ -23,46 +23,29 @@ const Icon = () => (
 );
 
 export const BlockHero = () => {
+  const messages = useMessages();
   const t = useTranslations('blocks.hero');
+  const services = messages.blocks.services.itemsHero;
 
   return (
-    <div className='bg-mm-black lg:h-screen relative'>
-      <div className='w-full h-full pt-20 lg:pt-0 lg:absolute top-0 left-0 right-0 bottom-0 lg:flex lg:flex-col items-center justify-center'>
-        <div className='w-full h-full lg:flex justify-end flex-col'>
-          <p className='text-mm-beige text-[7vw] leading-[7vw] fontBold mm-container py-[5%] lg:pb-[5%]'>
+    <div className='bg-mm-black relative'>
+      <div className='w-full h-full'>
+        <div className='grid grid-cols-12 pt-[20%] mb-[20%] lg:pt-[10%] lg:mb-[5%]'>
+          <p className='col-span-12 lg:col-span-6 text-mm-beige text-[6vw] leading-[6vw] lg:text-[4vw] lg:leading-[4vw] fontBold mm-container'>
             {t('text1') ?? '---'}
-            {` `}
+            {`\t`}
             <span className='text-mm-orange'>{t('text2') ?? '---'}</span>
           </p>
-          <Marquee>
-            <div className='flex items-center lg:items-start uppercase py-5 space-x-10'>
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] ml-10 tracking-wider'>
-                {t('text3') ?? '---'}
-              </p>
-              <Image
-                src='/images/gif/mm_team.gif'
-                alt='MadreMía logo'
-                unoptimized
-                width={250}
-                height={200}
-                quality={100}
-                priority
-                className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
-              />
-              <p className='text-mm-beige fontDGEBold text-[20vw] leading-[17vw] tracking-wide'>
-                {t('text4') ?? '---'}
-              </p>
-              <Image
-                src='/images/static/1.jpg'
-                alt='MadreMía logo'
-                width={200}
-                height={200}
-                quality={100}
-                priority
-                className='h-[80px] w-auto lg:min-h-[200px] lg:w-auto my-2'
-              />
+          <div className='col-span-12 lg:col-span-6 text-mm-beige p-[5%] py-[2%] lg:pt-[5%] lg:pb-0 flex items-end justify-end'>
+            <div className='space-x-4'>
+              <span>MADRID</span>
+              <span>MIAMI</span>
+              <span>BOGOTÁ</span>
             </div>
-          </Marquee>
+          </div>
+        </div>
+        <div className='text-mm-beige fontDGEBold text-[10vw] leading-[20vw] tracking-wide uppercase min-h-[100px] lg:min-h-[200px]'>
+          <Marquee>{`${services.join('  •  ')}  •  `}</Marquee>
         </div>
       </div>
     </div>
