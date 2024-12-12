@@ -100,14 +100,18 @@ const Comp = () => {
   return (
     <header
       ref={navRef}
-      className={clsx(finalPageName && finalPageName !== '/' && 'light')}
+      className={clsx(
+        finalPageName && finalPageName !== '/' ? 'light' : 'dark'
+      )}
     >
       <div className='nav-wrapper bg-mm-black py-0 px-0 lg:p-5'>
         <nav className='mm-container flex items-center lg:items-start justify-between py-2'>
           <div className='logo'>
             <Link href='/'>
               <Image
-                src='/images/logo.png'
+                src={
+                  pathname === '/' ? '/images/logo-alt.png' : '/images/logo.png'
+                }
                 alt='MadreMía logo'
                 width={150}
                 height={100}
