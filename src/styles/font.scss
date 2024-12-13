@@ -33,6 +33,11 @@
     src: url('./fonts/dharmaGothic/extraBold.ttf');
 }
 
+@font-face {
+    font-family: 'fontBoldTitlesA';
+    src: url('./fonts/dharmaGothic/DharmaGothicE-ExBold.ttf');
+}
+
 .fontRegular,
 .font-regular {
     font-family: "fontRegular";
@@ -64,4 +69,8 @@
 
 .fontDGEBold {
     font-family: "fontDGEBold";
+}
+
+.fontBoldTitlesA {
+    font-family: "fontBoldTitlesA";
 }

@@ -44,7 +44,7 @@ export const BlockHero = () => {
             </div>
           </div>
         </div>
-        <div className='text-mm-beige fontDGEBold text-[10vw] leading-[20vw] tracking-wide uppercase min-h-[100px] lg:min-h-[200px]'>
+        <div className='text-mm-beige fontBoldTitlesA text-[10vw] leading-[20vw] tracking-wide uppercase min-h-[100px] lg:min-h-[200px]'>
           <Marquee>{`${services.join('  •  ')}  •  `}</Marquee>
         </div>
       </div>
